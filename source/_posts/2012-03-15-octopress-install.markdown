@@ -8,7 +8,7 @@ categories: octopress
 
 
 
-![icon](http://evanhung.github.com/images/octopress.png)
+
 
 ## Octopress 安装过程整理
 
