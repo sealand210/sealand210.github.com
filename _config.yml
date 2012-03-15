@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://evanhung.github.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Dreaming in digital
+subtitle: The pathway to the digital future
+author: Evan Hung
 simple_search: http://google.com/search
 description:
 
@@ -89,11 +89,11 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: thinkbinary1010
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-30026048-1
 
 # Facebook Like
 facebook_like: false
