@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Dreaming in digital]]></title>
   <link href="http://evanhung.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://evanhung.github.com/"/>
-  <updated>2012-03-15T23:47:48+08:00</updated>
+  <updated>2012-03-15T23:52:46+08:00</updated>
   <id>http://evanhung.github.com/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
@@ -18,7 +18,9 @@
     <link href="http://evanhung.github.com/blog/2012/03/15/octopress-install/"/>
     <updated>2012-03-15T14:14:00+08:00</updated>
     <id>http://evanhung.github.com/blog/2012/03/15/octopress-install</id>
-    <content type="html"><![CDATA[<h2>Octopress 安装过程整理</h2>
+    <content type="html"><![CDATA[<p><img src="http://high-fire-6291.heroku.com/images/octopress.png" alt="icon" /></p>
+
+<h2>Octopress 安装过程整理</h2>
 
 <p>最近一直想找个简单好用的博客平台，方便整理和收集教程与资料。一开始选中了<em>wordpress.com</em>，设置简单，免费主题也有很多，但是缺点是速度太慢，而且还要挖地道才能看，想自己搭一个<em>wordpress</em>博客，但是又没找到好的免费平台，所以最后还是选择了用Octopress在github上搭站。<em>github</em>虽然也是国外的站点，但是因为Octopress无需<em>SQL</em>数据库，只是通过ruby将<em>markdown</em>文件生成html，所以浏览速度还是比较快的。</p>
 
