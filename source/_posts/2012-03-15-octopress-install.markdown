@@ -8,7 +8,7 @@ categories: octopress
 
 
 
-![icon](http://high-fire-6291.heroku.com/images/octopress.png)
+![icon](http://d-i-d.heroku.com/images/octopress.png)
 
 ## Octopress 安装过程整理
 
