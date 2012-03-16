@@ -68,7 +68,6 @@ $ bundle install
 $ sudo rm -rf _deploy
 $ rake setup_github_pages	#设定账户名
 git@github.com:username/username.github.com.git
-
 {%endcodeblock%}
 
 
@@ -134,14 +133,16 @@ User brandon
 	
 
 **编辑已经在heroku搭建好的Octopress**
-
-	#抓取网站源码
-	git config branch.master.remote heroku
-	git clone git@heroku.com:appName.git -o heroku
-	#生成上传
-	rake generate
-	git add .
-	git commit -m 'site updated'
-	git push heroku master
-
+{%codeblock%}
+#设定远程库
+git config branch.master.remote heroku
+git remote set-url heroku git@heroku.com:appName.git
+#抓取网站源码
+git clone git@heroku.com:appName.git -o heroku
+#生成上传
+rake generate
+git add .
+git commit -m 'site updated'
+git push heroku master
+{%endcodeblock%}
 
