@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: octopress | Dreaming in digital]]></title>
-  <link href="http://evanhung.github.com/blog/categories/octopress/atom.xml" rel="self"/>
-  <link href="http://evanhung.github.com/"/>
-  <updated>2012-03-16T20:12:40+08:00</updated>
-  <id>http://evanhung.github.com/</id>
+  <link href="http://dreaming-in-digital.me/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://dreaming-in-digital.me/"/>
+  <updated>2012-03-16T20:54:35+08:00</updated>
+  <id>http://dreaming-in-digital.me/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[部署Octopress]]></title>
-    <link href="http://evanhung.github.com/blog/2012/03/16/deploy-octopress/"/>
+    <link href="http://dreaming-in-digital.me/blog/2012/03/16/deploy-octopress/"/>
     <updated>2012-03-16T11:14:00+08:00</updated>
-    <id>http://evanhung.github.com/blog/2012/03/16/deploy-octopress</id>
+    <id>http://dreaming-in-digital.me/blog/2012/03/16/deploy-octopress</id>
     <content type="html"><![CDATA[<ul>
 <li><h3>认识github</h3></li>
 </ul>
@@ -228,9 +228,9 @@ git push heroku master
   
   <entry>
     <title type="html"><![CDATA[Octopress安装手记]]></title>
-    <link href="http://evanhung.github.com/blog/2012/03/15/octopress-install/"/>
+    <link href="http://dreaming-in-digital.me/blog/2012/03/15/octopress-install/"/>
     <updated>2012-03-15T14:14:00+08:00</updated>
-    <id>http://evanhung.github.com/blog/2012/03/15/octopress-install</id>
+    <id>http://dreaming-in-digital.me/blog/2012/03/15/octopress-install</id>
     <content type="html"><![CDATA[<p><img src="http://d-i-d.heroku.com/images/octopress.png" alt="octopress" /></p>
 
 <h2>Octopress 安装过程整理</h2>
