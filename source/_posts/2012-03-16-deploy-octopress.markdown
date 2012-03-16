@@ -1,9 +1,11 @@
 ---
-layout: post
+layout: page
 title: "部署Octopress"
 date: 2012-03-16 11:14
 comments: true
-categories: octopress heroku github
+published: false
+footer: false
+categories: octopress
 ---
 
 
