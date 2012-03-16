@@ -4,7 +4,7 @@
   <title><![CDATA[Dreaming in digital]]></title>
   <link href="http://evanhung.github.com/atom.xml" rel="self"/>
   <link href="http://evanhung.github.com/"/>
-  <updated>2012-03-16T13:22:55+08:00</updated>
+  <updated>2012-03-16T14:00:25+08:00</updated>
   <id>http://evanhung.github.com/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
@@ -107,10 +107,7 @@ $ git push origin HEAD:source
 </span><span class='line'>git@github.com:username/username.github.com.git</span></code></pre></td></tr></table></div></figure>
 
 
-<ul>
-<li><h3>认识heroku</h3></li>
-</ul>
-
+<h2>认识heroku</h2>
 
 <p>Heroku 是云端应用程式平台，可以想成是「云端上的网页空间」，不同于传统网页空间的计费方式，Heroku 是按照你所使用的资源来计费的，像是 CPU、RAM 使用越多就需要付越多钱，不过免费的方案已经够一般应用程式使用了。对比github，heroku的好处是repo是不公开的，也就是说除了作者外没有人可以看到网站目录。而且个人感觉在国内浏览heroku好像比github快</p>
 
@@ -206,7 +203,7 @@ git push heroku master
 </span><span class='line'>git push heroku master</span></code></pre></td></tr></table></div></figure>
 
 
-<h5>参考连接</h5>
+<h2>参考连接</h2>
 
 <ul>
 <li><a href="http://aboukone.com/2012/02/04/heroku-setup-git-push-heroku-master-permission-denied-ssh-issue/">http://aboukone.com/2012/02/04/heroku-setup-git-push-heroku-master-permission-denied-ssh-issue/</a></li>
@@ -224,7 +221,7 @@ git push heroku master
     <link href="http://evanhung.github.com/blog/2012/03/15/octopress-install/"/>
     <updated>2012-03-15T14:14:00+08:00</updated>
     <id>http://evanhung.github.com/blog/2012/03/15/octopress-install</id>
-    <content type="html"><![CDATA[<p><img src="http://d-i-d.heroku.com/images/octopress.png" alt="icon" /></p>
+    <content type="html"><![CDATA[<p><img src="http://d-i-d.heroku.com/images/octopress.png" alt="octopress" /></p>
 
 <h2>Octopress 安装过程整理</h2>
 
@@ -235,7 +232,7 @@ git push heroku master
 <!-- more -->
 
 
-<h3>环境搭建</h3>
+<h2>环境搭建</h2>
 
 <p><strong>Mac OSX Lion系统（实测10.7.3）：</strong></p>
 
@@ -294,7 +291,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/m
 
 <p>三步就完成了ubuntu的安装，环境搭建中最耗时的就是ruby的安装，因为是编译安装，cpu比较慢的电脑需要较长时间的等待。曾尝试过使用apt安装ruby,安装会快很多，但是使用ruby安装bundler的时候会出错, 不知道是为什么。</p>
 
-<h3>安装Octopress章鱼出版社</h3>
+<h2>安装Octopress章鱼出版社</h2>
 
 <p><strong>全新安装Octopress：</strong></p>
 
@@ -329,7 +326,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/m
 <pre><code>$ git push origin HEAD:source
 </code></pre>
 
-<h3>初步使用和设置Octopress章鱼出版社</h3>
+<h2>初步使用和设置Octopress章鱼出版社</h2>
 
 <p>octopress的初步设置很简单，就是文件目录下 <code>_config.yml</code> 这个文件:</p>
 
@@ -366,7 +363,7 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/m
 
 <p>就可以快速创建博文，然后使用文档工具打开source/_post/下的markdown文件就可以开始使用markdown编写博客了。Mac下推荐使用Mou编辑工具，Linux下推荐使用Retext编辑工具，使用这种工具的好处是自动预览和自动语法标注。</p>
 
-<h5>参考连接：</h5>
+<h2>参考连接：</h2>
 
 <ul>
 <li><a href="http://rubysource.com/installing-ruby-with-rvm-on-ubuntu/">http://rubysource.com/installing-ruby-with-rvm-on-ubuntu/</a></li>

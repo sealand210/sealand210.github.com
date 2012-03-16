@@ -4,7 +4,7 @@
   <title><![CDATA[Category: heroku | Dreaming in digital]]></title>
   <link href="http://evanhung.github.com/blog/categories/heroku/atom.xml" rel="self"/>
   <link href="http://evanhung.github.com/"/>
-  <updated>2012-03-16T13:22:55+08:00</updated>
+  <updated>2012-03-16T14:00:25+08:00</updated>
   <id>http://evanhung.github.com/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
@@ -105,10 +105,7 @@ $ git push origin HEAD:source
 </span><span class='line'>$ rake setup_github_pages   #设定账户名
 </span><span class='line'>git@github.com:username/username.github.com.git</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<ul>
-<li><h3>认识heroku</h3></li>
-</ul>
-
+<h2>认识heroku</h2>
 
 <p>Heroku 是云端应用程式平台，可以想成是「云端上的网页空间」，不同于传统网页空间的计费方式，Heroku 是按照你所使用的资源来计费的，像是 CPU、RAM 使用越多就需要付越多钱，不过免费的方案已经够一般应用程式使用了。对比github，heroku的好处是repo是不公开的，也就是说除了作者外没有人可以看到网站目录。而且个人感觉在国内浏览heroku好像比github快</p>
 
@@ -216,7 +213,7 @@ git push heroku master
 </span><span class='line'>git commit -m 'site updated'
 </span><span class='line'>git push heroku master</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<h5>参考连接</h5>
+<h2>参考连接</h2>
 
 <ul>
 <li><a href="http://aboukone.com/2012/02/04/heroku-setup-git-push-heroku-master-permission-denied-ssh-issue/">http://aboukone.com/2012/02/04/heroku-setup-git-push-heroku-master-permission-denied-ssh-issue/</a></li>

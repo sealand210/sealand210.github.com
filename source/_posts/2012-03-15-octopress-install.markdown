@@ -8,7 +8,7 @@ categories: octopress
 
 
 
-![icon](http://d-i-d.heroku.com/images/octopress.png)
+![octopress](http://d-i-d.heroku.com/images/octopress.png)
 
 ## Octopress 安装过程整理
 
@@ -21,7 +21,7 @@ categories: octopress
 <!-- more -->
 
 
-###环境搭建
+## 环境搭建
 
 **Mac OSX Lion系统（实测10.7.3）：**
 
@@ -74,7 +74,7 @@ $ rvm use 1.9.2 --default
 
 
 
-###安装Octopress章鱼出版社
+## 安装Octopress章鱼出版社
 
 **全新安装Octopress：**
 
@@ -103,7 +103,7 @@ $ rake deploy #发布到github
 			 
 
 	 
-###初步使用和设置Octopress章鱼出版社
+## 初步使用和设置Octopress章鱼出版社
 
 octopress的初步设置很简单，就是文件目录下 `_config.yml` 这个文件:
 
@@ -134,7 +134,7 @@ email:              # Email address for the RSS feed if you want it.
 
 
 
-#####参考连接：
+## 参考连接：
 
 * <http://rubysource.com/installing-ruby-with-rvm-on-ubuntu/>
 * <http://blog.4321.la/articles/2012/01/25/set-up-octopress/>

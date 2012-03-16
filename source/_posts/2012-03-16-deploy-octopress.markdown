@@ -76,9 +76,11 @@ $ rake setup_github_pages	#设定账户名
 git@github.com:username/username.github.com.git
 {%endcodeblock%}
 
+		
+		
+		
 
-
-* ###认识heroku
+## 认识heroku
 
 Heroku 是云端应用程式平台，可以想成是「云端上的网页空间」，不同于传统网页空间的计费方式，Heroku 是按照你所使用的资源来计费的，像是 CPU、RAM 使用越多就需要付越多钱，不过免费的方案已经够一般应用程式使用了。对比github，heroku的好处是repo是不公开的，也就是说除了作者外没有人可以看到网站目录。而且个人感觉在国内浏览heroku好像比github快
 
@@ -153,7 +155,7 @@ git push heroku master
 {%endcodeblock%}
 
 
-#####参考连接
+## 参考连接
 
 * <http://aboukone.com/2012/02/04/heroku-setup-git-push-heroku-master-permission-denied-ssh-issue/>
 * <http://zylstra.wordpress.com/2008/08/29/overcome-herokus-permission-denied-publickey-problem/>
