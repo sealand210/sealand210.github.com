@@ -3,6 +3,7 @@ layout: post
 title: "Octopress安装手记"
 date: 2012-03-15 14:14
 comments: true
+published: false
 categories: octopress
 ---
 
