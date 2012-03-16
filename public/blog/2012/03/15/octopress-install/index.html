@@ -130,12 +130,15 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/m
 
 <p>3.安装Ruby编译环境(通过RVM管理器)：</p>
 
-<p>{%codeblock%}
-$ bash -s stable &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
-$ rvm get head
-$ rvm install 1.9.2     #也可以选择1.9.3
-$ rvm 1.9.2 &#8211;default
-{%endcodeblock%}</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ bash -s stable &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+</span><span class='line'>$ rvm get head
+</span><span class='line'>$ rvm install 1.9.2   #也可以选择1.9.3
+</span><span class='line'>$ rvm 1.9.2 --default</span></code></pre></td></tr></table></div></figure>
+
 
 <p>完成后环境的搭建就大致结束了，需要POW的话也可以安装POW:</p>
 
@@ -153,38 +156,49 @@ $ rvm 1.9.2 &#8211;default
 
 <p>3.安装Ruby编译环境(通过RVM管理器)：</p>
 
-<p>{%codeblock%}
-$ bash &lt; &lt;(curl -sk https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
-$ echo &#8216;[[ -s &#8220;$HOME/.rvm/scripts/rvm&#8221; ]] &amp;&amp; . &#8220;$HOME/.rvm/scripts/rvm&#8221;&#8217; >> ~/.bashrc
-$ source ~/.bashrc
-$ sudo apt-get install build-essential openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev automake libtool bison subversion
-$ rvm install 1.9.2         #也可以选择1.9.3
-$ rvm use 1.9.2 &#8211;default
-{%endcodeblock%}</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ bash &lt; &lt;(curl -sk https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+</span><span class='line'>$ echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"' >> ~/.bashrc
+</span><span class='line'>$ source ~/.bashrc
+</span><span class='line'>$ sudo apt-get install build-essential openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev automake libtool bison subversion
+</span><span class='line'>$ rvm install 1.9.2           #也可以选择1.9.3
+</span><span class='line'>$ rvm use 1.9.2 --default</span></code></pre></td></tr></table></div></figure>
+
 
 <p>三步就完成了ubuntu的安装，环境搭建中最耗时的就是ruby的安装，因为是编译安装，cpu比较慢的电脑需要较长时间的等待。曾尝试过使用apt安装ruby,安装会快很多，但是使用ruby安装bundler的时候会出错, 不知道是为什么。</p>
-
-<!-- more -->
-
 
 <h3>安装Octopress章鱼出版社</h3>
 
 <p><strong>全新安装Octopress：</strong></p>
 
-<p>下载和安装最新的Octopress:
-{%codeblock%}
-$ git clone git://github.com/imathis/octopress.git octopress
-$ cd octopress    <br/>
-$ gem install bundler #安装依赖包：
-$ bundle install
-$ rake install  #安装默认主题</p>
+<p>下载和安装最新的Octopress:</p>
 
-<p>5.生成网站：
-{%codeblock%}
-$ rake generate #生成html
-$ rake preview  #测试浏览(localhost:4000)：
-$ rake deploy #发布到github
-{%endcodeblock%}</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>$ cd octopress        
+</span><span class='line'>$ gem install bundler #安装依赖包：
+</span><span class='line'>$ bundle install
+</span><span class='line'>$ rake install    #安装默认主题</span></code></pre></td></tr></table></div></figure>
+
+
+<p>5.生成网站：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake generate #生成html
+</span><span class='line'>$ rake preview    #测试浏览(localhost:4000)：
+</span><span class='line'>$ rake deploy #发布到github</span></code></pre></td></tr></table></div></figure>
+
 
 <p>这时应该就可以在username.github.com看到octopress的页面</p>
 
@@ -199,18 +213,27 @@ $ rake deploy #发布到github
 
 <p><strong>主要设置</strong></p>
 
-<p>{%codeblock%}
-url:                # For rewriting urls for RSS, etc
-title:              # Used in the header and title tags
-subtitle:           # A description used in the header
-author:             # Your name, for RSS, Copyright, Metadata
-simple_search:      # Search engine for simple site search
-description:        # A default meta description for your site
-subscribe_rss:      # Url for your blog&#8217;s feed, defauts to /atom.xml
-subscribe_email:    # Url to subscribe by email (service required)
-email:              # Email address for the RSS feed if you want it.
-{%endcodeblock%}
-其他的插件，第三方工具的设置也在该文件内。</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>url:                # For rewriting urls for RSS, etc
+</span><span class='line'>title:              # Used in the header and title tags
+</span><span class='line'>subtitle:           # A description used in the header
+</span><span class='line'>author:             # Your name, for RSS, Copyright, Metadata
+</span><span class='line'>simple_search:      # Search engine for simple site search
+</span><span class='line'>description:        # A default meta description for your site
+</span><span class='line'>subscribe_rss:      # Url for your blog's feed, defauts to /atom.xml
+</span><span class='line'>subscribe_email:    # Url to subscribe by email (service required)
+</span><span class='line'>email:              # Email address for the RSS feed if you want it.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>其他的插件，第三方工具的设置也在该文件内。</p>
 
 <p><strong>发表博文</strong></p>
 
@@ -220,13 +243,6 @@ email:              # Email address for the RSS feed if you want it.
 </code></pre>
 
 <p>就可以快速创建博文，然后使用文档工具打开source/_post/下的markdown文件就可以开始使用markdown编写博客了。Mac下推荐使用Mou编辑工具，Linux下推荐使用Retext编辑工具，使用这种工具的好处是自动预览和自动语法标注。</p>
-
-<p><strong>绑定域名</strong></p>
-
-<pre><code>$ echo '你要绑定的域名' &gt;&gt; source/CNAME
-</code></pre>
-
-<p>将你要绑定的域名CNAME到 http://你的GitHub用户名.github.com，如果是@纪录，需要加入207.97.227.245。</p>
 
 <h5>参考连接：</h5>
 

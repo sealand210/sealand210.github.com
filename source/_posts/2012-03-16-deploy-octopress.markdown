@@ -7,7 +7,7 @@ categories: octopress heroku github
 ---
 
 
-###认识github
+* ###认识github
 
 github其实就是一个具有社区功能的代码管理网站，方便开源程序的协力开发，当然它也可以成为软件公司的代码分布平台，但是如果你不想公开你的代码，就必须缴纳年费。
 
@@ -28,13 +28,13 @@ $ git commit -a -m "First pages commit"
 $ git push origin master
 {%endcodeblock%}
 
-刷新username.github.com可以看到My GitHub Page的字样就完成了。
+刷新`username.github.com`可以看到`My GitHub Page`的字样就完成了。
 
 了解github指令和更多的用法：
 [git - the simple guide - no deep shit](http://rogerdudler.github.com/git-guide/index.zh.html)
 
 
-**部署Octopress到github**
+#####部署Octopress到github
 
 进入octopress目录,设定远程仓库：
 
@@ -54,9 +54,15 @@ $ git push origin master
 	$ git add .
 	$ git commit -m 'site updated'
 	$ git push origin HEAD:source
+	
+#####绑定域名
+
+	$ echo '你要绑定的域名' >> source/CNAME
+
+将你要绑定的域名CNAME到 http://你的GitHub用户名.github.com，如果是@纪录，需要加入207.97.227.245。
 
 
-**编辑已经在github搭建好的Octopress：**
+#####编辑已经在github搭建好的Octopress：
 
 {%codeblock%}
 $ cd local.blog.path  #选择一个本地目录保存octopress
@@ -72,7 +78,7 @@ git@github.com:username/username.github.com.git
 
 
 
-###认识heroku
+* ###认识heroku
 
 Heroku 是云端应用程式平台，可以想成是「云端上的网页空间」，不同于传统网页空间的计费方式，Heroku 是按照你所使用的资源来计费的，像是 CPU、RAM 使用越多就需要付越多钱，不过免费的方案已经够一般应用程式使用了。对比github，heroku的好处是repo是不公开的，也就是说除了作者外没有人可以看到网站目录。而且个人感觉在国内浏览heroku好像比github快
 
@@ -94,7 +100,7 @@ Heroku 是云端应用程式平台，可以想成是「云端上的网页空间�
 	$ heroku create appName
 	
 
-**部署Octopress到heroku**
+#####部署Octopress到heroku
 
 首先要修改 `.gitignore` 文件，去掉文档中的 `public`,否则git不会 上传public文件夹，会出现网站无法访问的错误
 
@@ -132,7 +138,7 @@ User brandon
 	$ heroku open    #查看应用
 	
 
-**编辑已经在heroku搭建好的Octopress**
+#####编辑已经在heroku搭建好的Octopress
 {%codeblock%}
 #设定远程库
 git config branch.master.remote heroku
@@ -145,4 +151,14 @@ git add .
 git commit -m 'site updated'
 git push heroku master
 {%endcodeblock%}
+
+
+#####参考连接
+
+* <http://aboukone.com/2012/02/04/heroku-setup-git-push-heroku-master-permission-denied-ssh-issue/>
+* <http://zylstra.wordpress.com/2008/08/29/overcome-herokus-permission-denied-publickey-problem/>
+* <http://octopress.org/docs/deploying/heroku/>
+* <http://octopress.org/docs/deploying/github/>
+* <http://devcenter.heroku.com/articles/keys>
+
 

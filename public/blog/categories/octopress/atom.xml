@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Dreaming in digital]]></title>
   <link href="http://evanhung.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://evanhung.github.com/"/>
-  <updated>2012-03-16T12:48:19+08:00</updated>
+  <updated>2012-03-16T13:22:55+08:00</updated>
   <id>http://evanhung.github.com/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
@@ -18,7 +18,10 @@
     <link href="http://evanhung.github.com/blog/2012/03/16/deploy-octopress/"/>
     <updated>2012-03-16T11:14:00+08:00</updated>
     <id>http://evanhung.github.com/blog/2012/03/16/deploy-octopress</id>
-    <content type="html"><![CDATA[<h3>认识github</h3>
+    <content type="html"><![CDATA[<ul>
+<li><h3>认识github</h3></li>
+</ul>
+
 
 <p>github其实就是一个具有社区功能的代码管理网站，方便开源程序的协力开发，当然它也可以成为软件公司的代码分布平台，但是如果你不想公开你的代码，就必须缴纳年费。</p>
 
@@ -31,21 +34,25 @@
 
 <p>开始之前先设定git SSh密匙，和git用户全局参数，参照www.github.com</p>
 
-<p>{%codeblock%}
-$ git init
-$ git remote add origin git@github.com:username/username.github.com.git
-$ echo "My GitHub Page" > index.html
-$ git add .
-$ git commit -a -m "First pages commit"
-$ git push origin master
-{%endcodeblock%}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git init
+</span><span class='line'>$ git remote add origin git@github.com:username/username.github.com.git
+</span><span class='line'>$ echo "My GitHub Page" > index.html
+</span><span class='line'>$ git add .
+</span><span class='line'>$ git commit -a -m "First pages commit"
+</span><span class='line'>$ git push origin master</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>刷新username.github.com可以看到My GitHub Page的字样就完成了。</p>
+<p>刷新<code>username.github.com</code>可以看到<code>My GitHub Page</code>的字样就完成了。</p>
 
 <p>了解github指令和更多的用法：
 <a href="http://rogerdudler.github.com/git-guide/index.zh.html">git - the simple guide - no deep shit</a></p>
 
-<p><strong>部署Octopress到github</strong></p>
+<h5>部署Octopress到github</h5>
 
 <p>进入octopress目录,设定远程仓库：</p>
 
@@ -70,21 +77,38 @@ $ git commit -m 'site updated'
 $ git push origin HEAD:source
 </code></pre>
 
-<p><strong>编辑已经在github搭建好的Octopress：</strong></p>
+<h5>绑定域名</h5>
 
-<p>{%codeblock%}
-$ cd local.blog.path  #选择一个本地目录保存octopress
-$ git init            <br/>
-$ git remote add origin git@github.com:username/username.github.com.git
-$ git pull origin source        #从source抓取网站源码
-$ gem install bundler
-$ bundle install
-$ sudo rm -rf _deploy
-$ rake setup_github_pages   #设定账户名
-git@github.com:username/username.github.com.git
-{%endcodeblock%}</p>
+<pre><code>$ echo '你要绑定的域名' &gt;&gt; source/CNAME
+</code></pre>
 
-<h3>认识heroku</h3>
+<p>将你要绑定的域名CNAME到 http://你的GitHub用户名.github.com，如果是@纪录，需要加入207.97.227.245。</p>
+
+<h5>编辑已经在github搭建好的Octopress：</h5>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd local.blog.path  #选择一个本地目录保存octopress
+</span><span class='line'>$ git init            &lt;br/>
+</span><span class='line'>$ git remote add origin git@github.com:username/username.github.com.git
+</span><span class='line'>$ git pull origin source        #从source抓取网站源码
+</span><span class='line'>$ gem install bundler
+</span><span class='line'>$ bundle install
+</span><span class='line'>$ sudo rm -rf _deploy
+</span><span class='line'>$ rake setup_github_pages   #设定账户名
+</span><span class='line'>git@github.com:username/username.github.com.git</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><h3>认识heroku</h3></li>
+</ul>
+
 
 <p>Heroku 是云端应用程式平台，可以想成是「云端上的网页空间」，不同于传统网页空间的计费方式，Heroku 是按照你所使用的资源来计费的，像是 CPU、RAM 使用越多就需要付越多钱，不过免费的方案已经够一般应用程式使用了。对比github，heroku的好处是repo是不公开的，也就是说除了作者外没有人可以看到网站目录。而且个人感觉在国内浏览heroku好像比github快</p>
 
@@ -109,7 +133,7 @@ $ heroku keys   #查看是否上传成功
 <pre><code>$ heroku create appName
 </code></pre>
 
-<p><strong>部署Octopress到heroku</strong></p>
+<h5>部署Octopress到heroku</h5>
 
 <p>首先要修改 <code>.gitignore</code> 文件，去掉文档中的 <code>public</code>,否则git不会 上传public文件夹，会出现网站无法访问的错误</p>
 
@@ -130,15 +154,20 @@ git push heroku master
 
 <p>1.生成的rsa密匙不是默认的id_rsa名称，则需要在 <code>~/.ssh</code> 目录中添加<code>config</code> 文件将heroku的密匙指向你设定的密匙：</p>
 
-<p>{%codeblock%}
-Host heroku.com
-Hostname heroku.com
-Port 22
-IdentitiesOnly yes
-IdentityFile ~/.ssh/id_heroku
-TCPKeepAlive yes
-User brandon
-{%endcodeblock%}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Host heroku.com
+</span><span class='line'>Hostname heroku.com
+</span><span class='line'>Port 22
+</span><span class='line'>IdentitiesOnly yes
+</span><span class='line'>IdentityFile ~/.ssh/id_heroku
+</span><span class='line'>TCPKeepAlive yes
+</span><span class='line'>User brandon</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>2.heroku进入了 <code>/root/.shh/</code>而不是<code>~/.ssh/</code>查找密匙, 简单将密匙拷贝过去就可以了:</p>
 
@@ -150,25 +179,53 @@ User brandon
 <pre><code>$ heroku open    #查看应用
 </code></pre>
 
-<p><strong>编辑已经在heroku搭建好的Octopress</strong>
-{%codeblock%}</p>
+<h5>编辑已经在heroku搭建好的Octopress</h5>
 
-<h1>设定远程库</h1>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>设定远程库&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>git config branch.master.remote heroku
+</span><span class='line'>git remote set-url heroku git@heroku.com:appName.git&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>抓取网站源码&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>git clone git@heroku.com:appName.git -o heroku&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>生成上传&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>rake generate
+</span><span class='line'>git add .
+</span><span class='line'>git commit -m 'site updated'
+</span><span class='line'>git push heroku master</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>git config branch.master.remote heroku
-git remote set-url heroku git@heroku.com:appName.git</p>
+<h5>参考连接</h5>
 
-<h1>抓取网站源码</h1>
+<ul>
+<li><a href="http://aboukone.com/2012/02/04/heroku-setup-git-push-heroku-master-permission-denied-ssh-issue/">http://aboukone.com/2012/02/04/heroku-setup-git-push-heroku-master-permission-denied-ssh-issue/</a></li>
+<li><a href="http://zylstra.wordpress.com/2008/08/29/overcome-herokus-permission-denied-publickey-problem/">http://zylstra.wordpress.com/2008/08/29/overcome-herokus-permission-denied-publickey-problem/</a></li>
+<li><a href="http://octopress.org/docs/deploying/heroku/">http://octopress.org/docs/deploying/heroku/</a></li>
+<li><a href="http://octopress.org/docs/deploying/github/">http://octopress.org/docs/deploying/github/</a></li>
+<li><a href="http://devcenter.heroku.com/articles/keys">http://devcenter.heroku.com/articles/keys</a></li>
+</ul>
 
-<p>git clone git@heroku.com:appName.git -o heroku</p>
-
-<h1>生成上传</h1>
-
-<p>rake generate
-git add .
-git commit -m 'site updated'
-git push heroku master
-{%endcodeblock%}</p>
 ]]></content>
   </entry>
   
@@ -205,12 +262,22 @@ $ /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/m
 
 <p>3.安装Ruby编译环境(通过RVM管理器)：</p>
 
-<p>{%codeblock%}
-$ bash -s stable &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
-$ rvm get head
-$ rvm install 1.9.2     #也可以选择1.9.3
-$ rvm 1.9.2 --default
-{%endcodeblock%}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>$ bash -s stable &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+</span><span class='line'>$ rvm get head
+</span><span class='line'>$ rvm install 1.9.2     #也可以选择1.9.3
+</span><span class='line'>$ rvm 1.9.2 --default&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>完成后环境的搭建就大致结束了，需要POW的话也可以安装POW:</p>
 
@@ -228,38 +295,44 @@ $ rvm 1.9.2 --default
 
 <p>3.安装Ruby编译环境(通过RVM管理器)：</p>
 
-<p>{%codeblock%}
-$ bash &lt; &lt;(curl -sk https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
-$ echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm"' >> ~/.bashrc
-$ source ~/.bashrc
-$ sudo apt-get install build-essential openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev automake libtool bison subversion
-$ rvm install 1.9.2         #也可以选择1.9.3
-$ rvm use 1.9.2 --default
-{%endcodeblock%}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ bash &lt; &lt;(curl -sk https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+</span><span class='line'>$ echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm"' >> ~/.bashrc
+</span><span class='line'>$ source ~/.bashrc
+</span><span class='line'>$ sudo apt-get install build-essential openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev automake libtool bison subversion
+</span><span class='line'>$ rvm install 1.9.2         #也可以选择1.9.3
+</span><span class='line'>$ rvm use 1.9.2 --default</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>三步就完成了ubuntu的安装，环境搭建中最耗时的就是ruby的安装，因为是编译安装，cpu比较慢的电脑需要较长时间的等待。曾尝试过使用apt安装ruby,安装会快很多，但是使用ruby安装bundler的时候会出错, 不知道是为什么。</p>
-
-<!-- more -->
-
 
 <h3>安装Octopress章鱼出版社</h3>
 
 <p><strong>全新安装Octopress：</strong></p>
 
 <p>下载和安装最新的Octopress:
-{%codeblock%}
-$ git clone git://github.com/imathis/octopress.git octopress
-$ cd octopress    <br/>
-$ gem install bundler #安装依赖包：
-$ bundle install
-$ rake install  #安装默认主题</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>$ cd octopress    &lt;br/>
+</span><span class='line'>$ gem install bundler #安装依赖包：
+</span><span class='line'>$ bundle install
+</span><span class='line'>$ rake install  #安装默认主题</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>5.生成网站：
-{%codeblock%}
-$ rake generate #生成html
-$ rake preview  #测试浏览(localhost:4000)：
-$ rake deploy #发布到github
-{%endcodeblock%}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake generate #生成html
+</span><span class='line'>$ rake preview  #测试浏览(localhost:4000)：
+</span><span class='line'>$ rake deploy #发布到github</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>这时应该就可以在username.github.com看到octopress的页面</p>
 
@@ -274,17 +347,24 @@ $ rake deploy #发布到github
 
 <p><strong>主要设置</strong></p>
 
-<p>{%codeblock%}
-url:                # For rewriting urls for RSS, etc
-title:              # Used in the header and title tags
-subtitle:           # A description used in the header
-author:             # Your name, for RSS, Copyright, Metadata
-simple_search:      # Search engine for simple site search
-description:        # A default meta description for your site
-subscribe_rss:      # Url for your blog's feed, defauts to /atom.xml
-subscribe_email:    # Url to subscribe by email (service required)
-email:              # Email address for the RSS feed if you want it.
-{%endcodeblock%}
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>url:                # For rewriting urls for RSS, etc
+</span><span class='line'>title:              # Used in the header and title tags
+</span><span class='line'>subtitle:           # A description used in the header
+</span><span class='line'>author:             # Your name, for RSS, Copyright, Metadata
+</span><span class='line'>simple_search:      # Search engine for simple site search
+</span><span class='line'>description:        # A default meta description for your site
+</span><span class='line'>subscribe_rss:      # Url for your blog's feed, defauts to /atom.xml
+</span><span class='line'>subscribe_email:    # Url to subscribe by email (service required)
+</span><span class='line'>email:              # Email address for the RSS feed if you want it.</span></code></pre></td></tr></table></div></figure></notextile></div>
 其他的插件，第三方工具的设置也在该文件内。</p>
 
 <p><strong>发表博文</strong></p>
@@ -295,13 +375,6 @@ email:              # Email address for the RSS feed if you want it.
 </code></pre>
 
 <p>就可以快速创建博文，然后使用文档工具打开source/_post/下的markdown文件就可以开始使用markdown编写博客了。Mac下推荐使用Mou编辑工具，Linux下推荐使用Retext编辑工具，使用这种工具的好处是自动预览和自动语法标注。</p>
-
-<p><strong>绑定域名</strong></p>
-
-<pre><code>$ echo '你要绑定的域名' &gt;&gt; source/CNAME
-</code></pre>
-
-<p>将你要绑定的域名CNAME到 http://你的GitHub用户名.github.com，如果是@纪录，需要加入207.97.227.245。</p>
 
 <h5>参考连接：</h5>
 
