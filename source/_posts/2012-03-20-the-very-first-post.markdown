@@ -4,7 +4,7 @@ title: "The very first post"
 date: 2012-03-16 16:35
 comments: true
 sidebar: off
-categories: 
+categories: octopress
 ---
 
 In the past two days I've been working my butt off to set up this blog. It's not my first time to set up a website, but it is my first time to set up a octopress site, and host it on a online `Rack PasS`, and let it pass through china's `GFW` (a network filter that blocking foreign websites which china government consider as a threat). 
