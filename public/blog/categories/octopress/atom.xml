@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: octopress | DREAMING IN DIGITAL]]></title>
+  <title><![CDATA[Category: octopress | Dreaming in digital]]></title>
   <link href="http://www.dreaming-in-digital.me/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://www.dreaming-in-digital.me/"/>
-  <updated>2012-03-20T14:16:56+08:00</updated>
+  <updated>2012-03-20T20:37:08+08:00</updated>
   <id>http://www.dreaming-in-digital.me/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
-    
+    <email><![CDATA[mail2evan@me.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
