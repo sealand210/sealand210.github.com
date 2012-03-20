@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[DREAMING IN DIGITAL]]></title>
+  <title><![CDATA[Dreaming in digital]]></title>
   <link href="http://www.dreaming-in-digital.me/atom.xml" rel="self"/>
   <link href="http://www.dreaming-in-digital.me/"/>
-  <updated>2012-03-20T15:23:55+08:00</updated>
+  <updated>2012-03-20T20:23:46+08:00</updated>
   <id>http://www.dreaming-in-digital.me/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
@@ -12,5 +12,74 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why blogging in english]]></title>
+    <link href="http://www.dreaming-in-digital.me/blog/2012/03/20/why-blogging-in-english/"/>
+    <updated>2012-03-20T19:09:00+08:00</updated>
+    <id>http://www.dreaming-in-digital.me/blog/2012/03/20/why-blogging-in-english</id>
+    <content type="html"><![CDATA[<p>I am blogging in english is not because I hate chinese, contrarily, I think it is the best language for human being. We don’t need to invent a million words to explain everything, for example pig meat is pig meat in chinese, but in english pig meat is pork, the reason is the pronunciation of pig meat is too long for a high frequently used word, so people have to invent a new word.  Where chinese just need a two character word with two simple syllable each meaning pig and meat. there are thousands of  similar examples in english especially in expert language.  As a result english speaker end up with a dictionary containing a million different words to explain the whole human history where  chinese speaker only need 8 thousand chinese charater to create a million different meanings. On the surface chinese character is complicate, but deep inside It’s sample and elegant. Compare to English it has a higher entropy, which means it carries more information within same word length. I am blogging in English just because it’s a wildly used language in present.</p>
+
+<!-- more -->
+
+
+<p>But writing stuff in english is actually extremely difficult for me, because I have never learned english in a proper way, well, I mean academic way. In china english teaching starting from primary school, and up to college, add up to 16 years of english education. I did try to learn the english alphabetic in primary school, but I quit learning english in junior school because I hate gamma. I thought I can speak perfect chinese without learning chinese gamma, I can do the same with english. Since then all the english words and skills I learned is from western movies , english website, computer games and occasionally a glance of the word list on the english text book. Still, I think the best way of learning english is by practicing, so here I am, blogging in English.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The very first post]]></title>
+    <link href="http://www.dreaming-in-digital.me/blog/2012/03/16/the-very-first-post/"/>
+    <updated>2012-03-16T16:35:00+08:00</updated>
+    <id>http://www.dreaming-in-digital.me/blog/2012/03/16/the-very-first-post</id>
+    <content type="html"><![CDATA[<p>In the past two days I&#8217;ve been working my butt off to set up this blog. It&#8217;s not my first time to set up a website, but it is my first time to set up a octopress site, and host it on a online <code>Rack PasS</code>, and let it pass through china&#8217;s <code>GFW</code> (a network filter that blocking foreign websites which china government consider as a threat).</p>
+
+<p><img class="left" src="http://www.dreaming-in-digital.me/images/logo.png" width="200" height="200" title="logo" ></p>
+
+<p>I have also slightly alter the site theme. I like the default theme, so I just made a logo using photoshop and slightly changed the background. The difficult part is modify the <code>SASS</code> to let the page header adjust it’s size automatically, so my blog looks better on smartphones or any other handheld device. Octopress is very well organized, but even still, I had no clue what SASS is, and how to modify it.  After guessing and testing all the SASS code of the default theme I kind of figure out how it works. After a few hours of twisting I finally get it done.<!-- more --></p>
+
+<p>Now, take a look at this beautiful syntax highlitght engine it has:</p>
+
+<figure class='code'><figcaption><span> (test.js)</span> <a href='http://www.dreaming-in-digital.me/downloads/code/test.js'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm">sample javascript from xui</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="kc">undefined</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">xui</span><span class="p">,</span>
+</span><span class='line'>    <span class="nb">window</span>     <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">string</span>     <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nb">document</span>   <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">simpleExpr</span> <span class="o">=</span> <span class="sr">/^#?([\w-]+)$/</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">idExpr</span>     <span class="o">=</span> <span class="sr">/^#/</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">tagExpr</span>    <span class="o">=</span> <span class="sr">/&lt;([\w:]+)/</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">ret</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span> <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span> <span class="p">};</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">x$</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">xui</span> <span class="o">=</span> <span class="nx">xui</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="k">new</span> <span class="nx">xui</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">context</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>it&#8217;s one of my wish to have such gorgeous, elegant and user friendly code highlitghter in my blog. I&#8217;m in heaven!</p>
+]]></content>
+  </entry>
   
 </feed>

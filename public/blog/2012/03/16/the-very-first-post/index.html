@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Plugins - Dreaming in digital</title>
+  <title>The very first post - Dreaming in digital</title>
   <meta name="author" content="Evan Hung">
 
   
-  <meta name="description" content="Plugins Jul 22nd, 2011 There are other plugins for octopress, but here&#8217;s an overview of the ones you&#8217;ll be likely to use while blogging &hellip;">
+  <meta name="description" content="In the past two days I&#8217;ve been working my butt off to set up this blog. It&#8217;s not my first time to set up a website, but it is my first &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.dreaming-in-digital.me/docs/blogging/plugins">
+  <link rel="canonical" href="http://www.dreaming-in-digital.me/blog/2012/03/16/the-very-first-post">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -75,11 +75,15 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Plugins</h1>
-    <p class="meta">
+    
+      <h1 class="entry-title">The Very First Post</h1>
+    
+    
+      <p class="meta">
+        
 
 
 
@@ -91,75 +95,22 @@
   
 
 
-<time datetime="2011-07-22T11:18:00+08:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2011</time></p>
+<time datetime="2012-03-16T16:35:00+08:00" pubdate data-updated="true">Mar 16<span>th</span>, 2012</time>
+        
+      </p>
+    
   </header>
-  
-  <p>There are <a href="/docs/plugins">other plugins</a> for octopress, but here&#8217;s an overview of the ones you&#8217;ll be likely to use while blogging.
-This is mainly a description and demo, so be sure to follow the links beneath each section for examples and documentation.</p>
-
-<h2>Excerpts</h2>
-
-<p>When writing a post, you can add an HTML comment <code>&lt;!--more--&gt;</code> to split the post for an excerpt. Only the first section of the post, before the comment,
-will show up on the blog index.</p>
-
-<h2>HTML5 Video Tag</h2>
-
-<p>This plugin makes it easy to insert mp4 encoded HTML5 videos in a post. Octopress ships with javascripts which
-detect mp4 video support (<a href="http://modernizr.com">using Modernizr</a>) and automatically offer a flash player fallback.</p>
-
-<p><a href="/docs/plugins/video-tag/">Examples &amp; documentation &raquo;</a></p>
-
-<h2>Image Tag</h2>
-
-<p>This plugin makes it easy to insert images in a post, with optional class names, alt and title attributes.</p>
-
-<p><a href="/docs/plugins/image-tag/">Examples &amp; documentation &raquo;</a></p>
-
-<h2>Block quote</h2>
-
-<blockquote><p>Give a man a fish, he&#8217;ll have food for a day. Teach a man to fish, and he&#8217;ll always come to you with his fishing problems.</p><footer><strong>@AustinTaylor</strong> <cite><a href='https://twitter.com/austintaylor/status/73136957617750016'>twitter.com/austintaylor/status/&hellip;</a></cite></footer></blockquote>
 
 
-<p><a href="/docs/plugins/blockquote/">Examples &amp; documentation &raquo;</a></p>
+<div class="entry-content"><p>In the past two days I&#8217;ve been working my butt off to set up this blog. It&#8217;s not my first time to set up a website, but it is my first time to set up a octopress site, and host it on a online <code>Rack PasS</code>, and let it pass through china&#8217;s <code>GFW</code> (a network filter that blocking foreign websites which china government consider as a threat).</p>
 
-<h2>Pull quote</h2>
+<p><img class="left" src="/images/logo.png" width="200" height="200" title="logo" ></p>
 
-<p>Octopress offers a CSS only technique for pull quotes, based on the technique by <a href="http://miekd.com/articles/pull-quotes-with-html5-and-css/">Maykel Loomans</a>.</p>
+<p>I have also slightly alter the site theme. I like the default theme, so I just made a logo using photoshop and slightly changed the background. The difficult part is modify the <code>SASS</code> to let the page header adjust it’s size automatically, so my blog looks better on smartphones or any other handheld device. Octopress is very well organized, but even still, I had no clue what SASS is, and how to modify it.  After guessing and testing all the SASS code of the default theme I kind of figure out how it works. After a few hours of twisting I finally get it done.<!-- more --></p>
 
-<p><span class='pullquote-right' data-pullquote='pull quotes are merely visual in presentation and should not appear twice in the text. '>
-When writing longform posts, I find it helpful to include pull quotes to help readers easily identify the topics covered in each section. Some prefer to break things up with lots of headings, and while this seems to be a trend it doesn&#8217;t work so well for long form prose.
-It is important to note that pull quotes are merely visual in presentation and should not appear twice in the text. That is why it a CSS only technique for styling pull quotes is preferable. Octopress includes a handy pull quote plugin to make this easy for you.
-</span></p>
+<p>Now, take a look at this beautiful syntax highlitght engine it has:</p>
 
-<p><a href="/docs/plugins/pullquote/">Examples &amp; documentation &raquo;</a></p>
-
-<h2>Code Blocks</h2>
-
-<p>Write blocks of code directly in your posts and optionally add titles and links.</p>
-
-<figure class='code'><figcaption><span>Javascript Array Syntax (array.js)</span><a href='https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array'>MDN Documentation </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">arrayLength</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">element0</span><span class="p">,</span> <span class="nx">element1</span><span class="p">,</span> <span class="p">...,</span> <span class="nx">elementN</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="/docs/plugins/codeblock/">Examples &amp; documentation &raquo;</a></p>
-
-<h2>Gist Tag</h2>
-
-<p>Easily embed gists in your posts or pages.</p>
-
-<pre><code>{% gist 996818 %}
-</code></pre>
-
-<p><a href="/docs/plugins/gist-tag/">Examples &amp; documentation &raquo;</a></p>
-
-<h2>Include Code</h2>
-
-<p>Import files on your filesystem into any blog post as embedded code snippets with syntax highlighting and a download link.</p>
-
-<figure class='code'><figcaption><span>Testing include_code (test.js)</span> <a href='/downloads/code/test.js'>download</a></figcaption>
+<figure class='code'><figcaption><span> (test.js)</span> <a href='/downloads/code/test.js'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -197,21 +148,56 @@ It is important to note that pull quotes are merely visual in presentation and s
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><a href="/docs/plugins/include-code/">Examples &amp; documentation &raquo;</a></p>
+<p>it&#8217;s one of my wish to have such gorgeous, elegant and user friendly code highlitghter in my blog. I&#8217;m in heaven!</p>
+</div>
 
-<h2>Render Partial</h2>
 
-<p>Import files on your file system into any blog post or page. For example, to embed this page in another post I&#8217;d use the following code.</p>
+  <footer>
+    <p class="meta">
+      
+  
 
-<pre><code>{% render_partial docs/blogging/plugins/index.markdown %}
-</code></pre>
+<span class="byline author vcard">Posted by <span class="fn">Evan Hung</span></span>
 
-<p><a href="/docs/plugins/render-partial/">Examples &amp; documentation &raquo;</a></p>
+      
 
-<p>Also see the <a href="/docs/plugins">Octopress Plugin index</a> for the full list of Octopress plugins.</p>
+
+
+
+
+
+
 
   
+
+
+<time datetime="2012-03-16T16:35:00+08:00" pubdate data-updated="true">Mar 16<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/03/20/why-blogging-in-english/" title="next Post: Why blogging in english">Why blogging in english &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -230,7 +216,10 @@ It is important to note that pull quotes are merely visual in presentation and s
       var disqus_shortname = 'd-i-d';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.dreaming-in-digital.me/blog/2012/03/16/the-very-first-post/';
+        var disqus_url = 'http://www.dreaming-in-digital.me/blog/2012/03/16/the-very-first-post/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
