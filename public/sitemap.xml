@@ -1,16 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://www.dreaming-in-digital.me/blog/2012/03/15/octopress-install/</loc>
-        <lastmod>2012-03-19T20:21:38+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.dreaming-in-digital.me/blog/2012/03/16/deploy-octopress/</loc>
-        <lastmod>2012-03-17T05:27:54+08:00</lastmod>
-    </url>
-    <url>
         <loc>http://www.dreaming-in-digital.me/blog/archives/</loc>
-        <lastmod>2012-03-19T20:21:38+08:00</lastmod>
+        <lastmod>2012-03-17T05:27:54+08:00</lastmod>
     </url>
     <url>
         <loc>http://www.dreaming-in-digital.me/docs/blogging/code/</loc>
@@ -138,7 +130,7 @@
     </url>
     <url>
         <loc>http://www.dreaming-in-digital.me/</loc>
-        <lastmod>2012-03-19T20:21:38+08:00</lastmod>
+        <lastmod>2012-03-17T06:04:17+08:00</lastmod>
     </url>
     <url>
         <loc>http://www.dreaming-in-digital.me/my-collections/</loc>
