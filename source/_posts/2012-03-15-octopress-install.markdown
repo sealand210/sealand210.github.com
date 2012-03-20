@@ -4,15 +4,14 @@ title: "Octopress安装手记"
 date: 2012-03-15 14:14
 comments: true
 published: false
+sidebar: false
 categories: octopress
 ---
 
 
 
-![octopress](http://d-i-d.heroku.com/images/octopress.png)
 
-## Octopress 安装过程整理
-
+{% img left http://dreaming-in-digital.me/images/octopress.png 200 150 octopress  %}
 
 最近一直想找个简单好用的博客平台，方便整理和收集教程与资料。一开始选中了*wordpress.com*，设置简单，免费主题也有很多，但是缺点是速度太慢，而且还要挖地道才能看，想自己搭一个*wordpress*博客，但是又没找到好的免费平台，所以最后还是选择了用Octopress在github和heroku上搭站。这两个虽然也是国外的站点，但是因为Octopress无需*SQL*数据库，只是通过ruby将*markdown*文件生成html，所以浏览速度还是比较快的。
 

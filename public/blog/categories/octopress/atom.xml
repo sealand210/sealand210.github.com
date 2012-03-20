@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: octopress | Dreaming in digital]]></title>
+  <title><![CDATA[Category: octopress | DREAMING IN DIGITAL]]></title>
   <link href="http://www.dreaming-in-digital.me/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://www.dreaming-in-digital.me/"/>
-  <updated>2012-03-17T04:23:16+08:00</updated>
+  <updated>2012-03-20T14:16:56+08:00</updated>
   <id>http://www.dreaming-in-digital.me/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
@@ -231,9 +231,7 @@ git push heroku master
     <link href="http://www.dreaming-in-digital.me/blog/2012/03/15/octopress-install/"/>
     <updated>2012-03-15T14:14:00+08:00</updated>
     <id>http://www.dreaming-in-digital.me/blog/2012/03/15/octopress-install</id>
-    <content type="html"><![CDATA[<p><img src="http://d-i-d.heroku.com/images/octopress.png" alt="octopress" /></p>
-
-<h2>Octopress 安装过程整理</h2>
+    <content type="html"><![CDATA[<p><img class="left" src="http://dreaming-in-digital.me/images/octopress.png" width="200" height="150" title="octopress" ></p>
 
 <p>最近一直想找个简单好用的博客平台，方便整理和收集教程与资料。一开始选中了<em>wordpress.com</em>，设置简单，免费主题也有很多，但是缺点是速度太慢，而且还要挖地道才能看，想自己搭一个<em>wordpress</em>博客，但是又没找到好的免费平台，所以最后还是选择了用Octopress在github和heroku上搭站。这两个虽然也是国外的站点，但是因为Octopress无需<em>SQL</em>数据库，只是通过ruby将<em>markdown</em>文件生成html，所以浏览速度还是比较快的。</p>
 
