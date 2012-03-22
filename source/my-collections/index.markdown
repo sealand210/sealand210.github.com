@@ -24,11 +24,10 @@ A convenient web tool translate video page url from youtube, vimeo, yahoo etc., 
 {% img left /images/colorpicker.png color picker%}
 ###[HSL Color Picker](http://hslpicker.com)
 
-<<<<<<< HEAD
 A very good looking and practical tool from Brandon Mathis, it automatically generate color codes for any chosen color.
-=======
+
 A very good looking and practical tool from Brandon Mathis, it automatically generate color codes for any specific color.
->>>>>>> 500d90bc0029efee5efcbe8cd235d9c083be68df
+
 
 
 ## 
@@ -36,7 +35,7 @@ A very good looking and practical tool from Brandon Mathis, it automatically gen
 {% img left /images/pingdom.png pingdom tools%}
 ###[Pingdom tools](http://tools.pingdom.com)
 
-<<<<<<< HEAD
+
 Confusing about why your website is so slow? Here is a tool  help you test and analyze webpage loading time.                                     
                        
 
@@ -47,6 +46,5 @@ Confusing about why your website is so slow? Here is a tool  help you test and a
 ###[Image Optim for mac](http://imageoptim.com/)
 
 It's a handy little tool that helps you compress png images. It's very easy to use, just drag and drop, and you are done.
-=======
-Confusing about why your website is so slow? Here is a tool may help you figure it out.
->>>>>>> 500d90bc0029efee5efcbe8cd235d9c083be68df
+
+
