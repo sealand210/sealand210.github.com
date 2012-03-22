@@ -32,4 +32,17 @@ A very good looking and practical tool from Brandon Mathis, it automatically gen
 {% img left /images/pingdom.png pingdom tools%}
 ###[Pingdom tools](http://tools.pingdom.com)
 
-Confusing about why your website is so slow? Here is a tool may help you figure it out.
+Confusing about why your website is so slow? Here is a tool may help you figure it out.
+
+                       
+
+
+## 
+
+{% img left /images/imageoptim.png image optim%}
+###[Image Optim for mac](http://imageoptim.com/)
+
+It's a handy little tool that helps you compress png images. It's very easy to use, just drag and drop, and you are done.
+
+Confusing about why your website is so slow? Here is a tool may help you figure it out.
+
