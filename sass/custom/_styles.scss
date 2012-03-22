@@ -1,0 +1,163 @@
+article li { em { color: mix($text-color-light, $text-color); }}
+
+//@include font-face("Bebas-Neue", font-files("bebasneue-web.woff", woff, "bebasneue-web.ttf", truetype, "bebasneue-web.svg#BebasNeueRegular", svg), $eot: "bebasneue-web.eot" );
+
+body > header h1 {
+ // font-family: "Bebas-Neue", serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+body > header {
+  font-size: .6em;
+  hgroup {
+    //text-align: center;
+   // position: relative;
+    padding: .5em 0;
+    margin: 0 auto;
+  }
+  h1 {
+    text-shadow: rgba(#000, .8) 0 0 8px;
+    font-size: 2em;
+    line-height: .8em;
+    position: relative;
+
+    padding-bottom: 8.75em;
+    margin: 0;
+    a:hover { color: #fff; }
+    &:after {
+    font-size: 1.5em;
+      content: "";
+      position: absolute; left: .5em; right: 0; top: .1em;
+      height: image-height('logo.png');
+      @include replace-text('logo.png');
+    }
+  }
+  h2 {
+    
+    font-size: 1.3em;
+    position: relative; top: .4em;
+  }
+
+@media only screen and (min-width: 0px) {
+   
+    
+    h1 { padding-bottom: .5em;
+	padding-top: .7em;
+      &:after {
+        position: absolute; top: -.45em; right: -3.3em; left: auto;
+        width: 3.2em;
+        height: 3.2em;
+        @include background-size(100%);
+      }
+     }
+}
+
+ @media only screen and (min-width: 400px) {
+    font-size: .7em;
+  /*  hgroup {
+      //left: -.7em;
+      //width: 28em;
+	//text-align: left;
+    }*/
+    h1 { padding-bottom: .5em;
+	padding-top: .7em;
+      &:after {
+        position: absolute; top: -.55em; right: -4em; left: auto;
+        width: 3.3em;
+        height: 3.3em;
+        @include background-size(100%);
+      }
+    }
+    h2 {
+      margin: 0 0 .3em;
+      @extend .sans;
+      font-size: 1.1em;
+      color: $subtitle-color;
+      position: relative; left: 0em; top: 0;
+      text-shadow: $header-bg 0 1px 1px;
+    }
+  }
+
+
+  @media only screen and (min-width: 480px) {
+    font-size: 0.90em;
+    h2 { top: .4em; }
+ hgroup { 
+padding: 0 0 1.3em;
+
+
+ }
+    h1:after {
+      position: absolute; top: -0.45em; right: -3.3em; 
+        width: 3.2em;
+        height: 3.2em;
+        @include background-size(100%);
+    }
+  }
+
+@media only screen and (min-width: 530px) {
+   // padding: 2em 0 1.5;
+    font-size: 1.0em;
+    hgroup { padding: 0 0 1.3em; 
+text-align: left;}
+    h1:after {
+      position: absolute; top: -.48em; right: -3.8em; left: auto;
+        width: 3.3em;
+        height: 3.3em;
+        @include background-size(100%);
+    }
+  }
+
+ @media only screen and (min-width: 600px) {
+   // padding: 2em 0 1.5;
+    font-size: 1.1em;
+    hgroup { padding: 0 0 1.3em; 
+text-align: left;}
+    h1:after {
+      position: absolute; top: -.45em; right: -3.8em; left: auto;
+        width: 3.3em;
+        height: 3.3em;
+        @include background-size(100%);
+    }
+  }
+
+@media only screen and (min-width: 680px) {
+   // padding: 2em 0 1.5;
+    font-size: 1.3em;
+    hgroup { padding: 0 0 1.3em; 
+text-align: left;}
+    h1:after {
+      position: absolute; top: -.45em; right: -3.3em; left: auto;
+        width: 3.3em;
+        height: 3.3em;
+        @include background-size(100%);
+    }
+  }
+
+
+  @media only screen and (min-width: 768px) {
+   // padding: 2em 0 1.5;
+    font-size: 1.38em;
+   /* hgroup { //padding: 0 0 1.3em;
+text-align: left; }*/
+    h1:after {
+      position: absolute; top: -.45em; right: -4.0em; left: auto;
+        width: 3.3em;
+        height: 3.3em;
+        @include background-size(100%);
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    font-size: 1.4em;
+	
+
+    h1:after {
+      position: absolute; top: -.55em; right: -3.8em; left: auto;
+        width: 3.3em;
+        height: 3.3em;
+        @include background-size(100%);
+    }
+  }
+}
+
