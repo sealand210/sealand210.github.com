@@ -1,179 +1,167 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://www.dreaming-in-digital.me/blog/2012/03/15/hello-test/</loc>
+        <loc>http://sealand210.github.com/blog/2012/03/16/the-very-first-post/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/blog/2012/03/15/octopress-install/</loc>
+        <loc>http://sealand210.github.com/blog/2012/03/20/why-blogging-in-english/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/blog/2012/03/16/deploy-octopress/</loc>
+        <loc>http://sealand210.github.com/about/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/blog/2012/03/16/the-very-first-post/</loc>
+        <loc>http://sealand210.github.com/blog/archives/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/blog/2012/03/20/why-blogging-in-english/</loc>
+        <loc>http://sealand210.github.com/docs/blogging/code/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/about/</loc>
+        <loc>http://sealand210.github.com/docs/blogging/code/test/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/blog/archives/</loc>
+        <loc>http://sealand210.github.com/docs/blogging/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/blogging/code/</loc>
+        <loc>http://sealand210.github.com/docs/blogging/linklog/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/blogging/code/test/</loc>
+        <loc>http://sealand210.github.com/docs/blogging/plugins/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/blogging/</loc>
+        <loc>http://sealand210.github.com/docs/configuring/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/blogging/linklog/</loc>
+        <loc>http://sealand210.github.com/docs/deploying/github/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/blogging/plugins/</loc>
+        <loc>http://sealand210.github.com/docs/deploying/heroku/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/configuring/</loc>
+        <loc>http://sealand210.github.com/docs/deploying/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/deploying/github/</loc>
+        <loc>http://sealand210.github.com/docs/deploying/rsync/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/deploying/heroku/</loc>
+        <loc>http://sealand210.github.com/docs/deploying/subdir/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/deploying/</loc>
+        <loc>http://sealand210.github.com/docs/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/deploying/rsync/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/backtick-codeblock/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/deploying/subdir/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/blockquote/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/category-generator/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/backtick-codeblock/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/codeblock/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/blockquote/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/gist-tag/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/category-generator/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/image-tag/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/codeblock/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/include-array/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/gist-tag/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/include-code/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/image-tag/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/include-array/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/jsfiddle-tag/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/include-code/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/pullquote/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/render-partial/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/jsfiddle-tag/</loc>
+        <loc>http://sealand210.github.com/docs/plugins/video-tag/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/pullquote/</loc>
+        <loc>http://sealand210.github.com/docs/setup/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/render-partial/</loc>
+        <loc>http://sealand210.github.com/docs/setup/rvm/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/plugins/video-tag/</loc>
+        <loc>http://sealand210.github.com/docs/theme/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/setup/</loc>
+        <loc>http://sealand210.github.com/docs/theme/styles/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/setup/rvm/</loc>
+        <loc>http://sealand210.github.com/docs/theme/template/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/theme/</loc>
+        <loc>http://sealand210.github.com/docs/updating/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/theme/styles/</loc>
+        <loc>http://sealand210.github.com/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/theme/template/</loc>
+        <loc>http://sealand210.github.com/my-collections/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/docs/updating/</loc>
+        <loc>http://sealand210.github.com/test/code/markdown/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/</loc>
+        <loc>http://sealand210.github.com/test/code/textile/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/my-collections/</loc>
+        <loc>http://sealand210.github.com/test/haml/</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
     <url>
-        <loc>http://www.dreaming-in-digital.me/test/code/markdown/</loc>
-        <lastmod>2012-03-22T20:13:28+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.dreaming-in-digital.me/test/code/textile/</loc>
-        <lastmod>2012-03-22T20:13:28+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.dreaming-in-digital.me/test/haml/</loc>
-        <lastmod>2012-03-22T20:13:28+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.dreaming-in-digital.me/test/video.html</loc>
+        <loc>http://sealand210.github.com/test/video.html</loc>
         <lastmod>2012-03-22T20:13:28+08:00</lastmod>
     </url>
 </urlset>
