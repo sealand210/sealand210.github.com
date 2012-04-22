@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Dreaming in Digital]]></title>
+  <link href="http://dreaming-in-digital.me/atom.xml" rel="self"/>
+  <link href="http://dreaming-in-digital.me/"/>
+  <updated>2012-04-22T16:39:59+08:00</updated>
+  <id>http://dreaming-in-digital.me/</id>
+  <author>
+    <name><![CDATA[Evan Hung]]></name>
+    <email><![CDATA[mail2evan@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[AKG K518DJ detachable cable modification]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/04/22/akg-k518dj-single-entry-with-detachable-cable-modification/"/>
+    <updated>2012-04-22T14:21:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/04/22/akg-k518dj-single-entry-with-detachable-cable-modification</id>
+    <content type="html"><![CDATA[<p><img src="http://dreaming-in-digital.me/images/518dj-3.jpg"></p>
+
+<p>I like the design of Monster headphones, especially the detachable cable and it&#8217;s cable design, but I don&#8217;t appreciate it&#8217;s sound quality and price tag. My AKG 518dj headphone is the best headphone in it&#8217;s price range, but it also came with a long, old fashioned and undetachable cable. So I decide to modify it, make it&#8217;s cable function just like Monsters, and then give it a Monster cable.</p>
+
+<!--more-->
+
+
+<p>The modification is actually very easy. The AKG&#8217;s headphone is well designed and it&#8217;s very easy to open up, just remove the pads and there are 3 screws that hold each cup together. Untighten them and the cup will split in half, allowing you to get to the driver connections.</p>
+
+<p><img src="http://dreaming-in-digital.me/images/518dj-1.jpg"></p>
+
+<p>The 3.5mm socket is from a Sony 3.5mm extension cable, it got an aluminum case, which looks very nice.  The gluing and soldering is very basic, but drilling a perfect hole for the socket is quite difficult. The cup is round shaped and 3.5mm socket must come out at a roughly 30 degree angle. It&#8217;s impossible to precisely measure how much to drill, so I have to slow down the process, and do it very carefully.</p>
+
+<p>After spending nearly 1 hour to drill the hole using a dremel, and fix the socket with hot glue, I finally got it done.</p>
+
+<p><img src="http://dreaming-in-digital.me/images/518dj-2.jpg"></p>
+
+<p><img src="http://dreaming-in-digital.me/images/518dj-4.jpg"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git &amp; Github]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/04/03/git-and-github/"/>
+    <updated>2012-04-03T22:32:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/04/03/git-and-github</id>
+    <content type="html"><![CDATA[<p><img src="http://dreaming-in-digital.me/images/githuboctacat.jpg"></p>
+
+<h2>GIT</h2>
+
+<p>I&#8217;ve been using git and github to modify and update my code recently,  and I found it’s fantastic, I should learn to use them earlier.   A great thing about Git is,  you can use it to create multiple versions of your code and Git will keep tracking your modifications. In Git, create a copy is called branching. To create a branch you just need to type in a line of very simple command under your working directory:</p>
+
+<pre><code>$ git branch your_branch_name
+</code></pre>
+
+<!-- more -->
+
+
+<p>A new copy (branch) named your_branch_name is created, to enter that branch, simply type:</p>
+
+<pre><code>$ git checkout your_branch_name
+</code></pre>
+
+<p>The default branch is master branch, so if you didn’t create any branches then you are in master branch. Good thing about using branch is, editing any branch within the same directory will not change other branches. So you can do any experimentation you want using branch without worrying about damage the main code. If you found your experimentation with that branch has gone to a dead end,  you can simply delete the branch:</p>
+
+<pre><code>$ git branch -D your_branch_name
+</code></pre>
+
+<p>There are two options of deleting a branch:</p>
+
+<pre><code>-d Delete a branch. The branch must be fully merged in its upstream branch,
+   or in HEAD if no upstream was set with --track or --set-upstream.
+
+-D Delete a branch irrespective of its merged status.
+</code></pre>
+
+<p>After deleting the branch, you can go back to your master branch:</p>
+
+<pre><code>  $ git checkout master
+</code></pre>
+
+<p>Everything is back to original.</p>
+
+<p>Another thing about branch is, you can merge branches using merge command:</p>
+
+<pre><code>$ git merge branch_name
+</code></pre>
+
+<p>This command will merge the branch_name to your active branch, git will tries to auto-merge changes. Unfortunately, this is not always possible and results in conflicts. You are responsible to merge those conflicts manually by editing the files shown by git.</p>
+
+<p>Another great thing about Git is, any modification of your code is temporary, this stage is called <code>Index</code>. To start tracking your code, use add command:</p>
+
+<pre><code>$ git add your_file_name
+</code></pre>
+
+<p>To track all your file you can use following command:</p>
+
+<pre><code>$ git add .  #tstages new and modified, without deleted
+$ git add -u #stages modified and deleted, without new
+$ git add -A #stages All
+</code></pre>
+
+<p> Then you can edit your code, compile it and run it. But after that if you don’t like your modifications, you can undo it with checkout command:</p>
+
+<pre><code>$ git checkout your_file_name
+</code></pre>
+
+<p>If you like your modifications, just use commit command:</p>
+
+<pre><code>$ git commit -m “update message”
+</code></pre>
+
+<p>Now the file is committed to the HEAD, which points to the last commit you&#8217;ve made.</p>
+
+<p>You can always use status command to checkout which branch you are in and what modifications you have done:</p>
+
+<pre><code>$ git status
+</code></pre>
+
+<p>To view all your histories in GUI, just type:</p>
+
+<pre><code>$ gitk
+</code></pre>
+
+<h2>GITHUB</h2>
+
+<p>Github is web service that put your local repository online, so people can share their code and work together.</p>
+
+<p>To clone a remote repository just type:</p>
+
+<pre><code>$ git clone /path/to/repository
+</code></pre>
+
+<p>To push your local repository to remote just type:</p>
+
+<pre><code>$ git push origin your_branch_name
+</code></pre>
+
+<p>If you have not cloned an existing repository and want to connect your repository to a remote server, you need to add it with
+   $ git remote add origin <server>
+ Now you are able to push your changes to the selected remote server</p>
+
+<p>If you have cloned an existing repository but you want to change url, you can change it with:</p>
+
+<pre><code>$ git remote set-url origin &lt;server&gt; 
+</code></pre>
+
+<p>Some time if your local history is lost, git will not upload your code to prevent losing data and history, you can use -f to force upload your code, but that is not always a good idea.</p>
+
+<p>That’s so far that I have learned,  and I am just scratching the surface right now, when I have fully understand git, I will come back and update this post.</p>
+
+<h2>References:</h2>
+
+<p><a href="http://rogerdudler.github.com/git-guide/index.html">http://rogerdudler.github.com/git-guide/index.html</a></p>
+
+<p><a href="http://linux.die.net/man/1/git-branch">http://linux.die.net/man/1/git-branch</a></p>
+
+<p><a href="http://stackoverflow.com/questions/572549/difference-of-git-add-a-and-git-add">http://stackoverflow.com/questions/572549/difference-of-git-add-a-and-git-add</a>
+<a href="http://hi.baidu.com/royzhu/blog/item/c3499159f506522f2834f0f1.html">http://hi.baidu.com/royzhu/blog/item/c3499159f506522f2834f0f1.html</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Disable internal display in lion]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/04/02/disable-internal-display-on-lion/"/>
+    <updated>2012-04-02T14:54:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/04/02/disable-internal-display-on-lion</id>
+    <content type="html"><![CDATA[<p><img src="http://dreaming-in-digital.me/images/macbook-pro-with-dual-cinema-displays.jpeg"></p>
+
+<p>Some MacBook Pro or Air users may want to disable their internal screen when the laptop is connected to an external display, this is generally <a href="http://osxdaily.com/2011/01/14/turn-off-the-macbook-or-macbook-pro-screen-with-the-computer-still-on/">achieved in two ways</a> but since Mac OS X 10.7 the internal screen is more persistent and wants to stay on.</p>
+
+<p>To disable the internal screen for OS X Lion based laptops, launch the Terminal and enter the following command:</p>
+
+<pre><code>sudo nvram boot-args="iog=0x0"
+</code></pre>
+
+<!-- more -->
+
+
+<p>You’ll need to reboot for changes to take effect, and the internal display will then be completely disabled regardless of whether the Mac is open or closed.</p>
+
+<p>To undo this, you can go back to the Terminal and enter:</p>
+
+<pre><code>sudo nvram -d boot-args
+</code></pre>
+
+<p>Then reboot again, or you can just <a href="http://osxdaily.com/2010/11/15/reset-pram-mac/">zap PRAM</a> by holding down <code>Command+Option+P+R</code> during reboot, which clears out the boot-args as well. If you were to disconnect the MacBook Pro from an external video source, zapping the PRAM would be how you’d want to reenable the internal display.</p>
+
+<p>This is the opposite of “<a href="http://osxdaily.com/2010/04/15/how-to-use-a-macbook-or-macbook-pro-with-the-lid-closed-and-hooked-to-an-external-monitor/">clamshell mode</a>” – where the Mac laptop is closed and the screen is still turned on. Clamshell can look nice, but without adequate air flow the Mac may overheat, thus running the computer with the display open is recommended. If you’re going to do this, be sure to set the <a href="http://osxdaily.com/2010/04/27/set-the-primary-display-mac/">primary display</a> so that the menubar, Dock, and alert windows go to the proper screen.</p>
+
+<p>Thanks to Marcus for the tip via a thread on <a href="https://discussions.apple.com/thread/3190417?start=180&amp;tstart=0">Apple Discussions</a></p>
+
+<h2>References:</h2>
+
+<p><a href="http://osxdaily.com/2011/09/14/disable-the-internal-screen-on-a-macbook-pro-or-air-in-mac-os-x-10-7-lion/">http://osxdaily.com/2011/09/14/disable-the-internal-screen-on-a-macbook-pro-or-air-in-mac-os-x-10-7-lion/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Ubuntu LightDM]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/03/30/setting-lightdm/"/>
+    <updated>2012-03-30T23:57:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/03/30/setting-lightdm</id>
+    <content type="html"><![CDATA[<p><img src="http://dreaming-in-digital.me/images/LightDM.png"></p>
+
+<p>Ubuntu Oneiric comes with a new display/login manager - <code>LightDM</code>. Just like setting <code>GDM</code>, <code>XDM</code> or <code>KDM</code> etc., LightDM can also be set to auto-login by creating a custom file named <code>lightdm.conf</code> under <code>/etc/lightdm</code> directory. This way you can also define your preferred auto-login session.</p>
+
+<p>So, get to a Terminal and run:</p>
+
+<pre><code>gksudo gedit /etc/lightdm/lightdm.conf
+</code></pre>
+
+<p>If you are doing it from the console, you would need to use &#8216;nano&#8217; instead of &#8216;gedit&#8217; and &#8216;sudo&#8217; instead o &#8216;gksudo&#8217;.</p>
+
+<p>In the file that opens up, enter this text:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[SeatDefaults]
+</span><span class='line'>autologin-user=&lt;USERNAME&gt;
+</span><span class='line'>autologin-user-timeout=0
+</span><span class='line'>user-session=ubuntu
+</span><span class='line'>greeter-session=unity-greeter</span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
+
+
+<p>  <br/>
+Replace &#8217;<USERNAME>&#8217; with your username and &#8216;ubuntu&#8217; with your preferred session if you want to automatically log in to some other session than regular Unity. These are the most common session options:</p>
+
+<p><code>Ubuntu</code> (regular Unity) :<code>ubuntu</code>  <br/>
+<code>Ubuntu 2D</code> (Unity 2D) :<code>ubuntu-2d</code>   <br/>
+<code>GNOME</code> (Gnome Shell) :<code>gnome-shell</code>    <br/>
+<code>GNOME Classic</code> :<code>gnome-classic</code>  <br/>
+<code>GNOME Classic (No effects)</code> :<code>gnome-fallback</code></p>
+
+<h2>Timed Auto-Login and More Advanced Options</h2>
+
+<figure class='code'><figcaption><span>lightDM setting  (lightdm.conf)</span> <a href='http://dreaming-in-digital.me/downloads/code/lightdm.conf'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+</pre></td><td class='code'><pre><code class='tex'><span class='line'>#
+</span><span class='line'># General configuration
+</span><span class='line'>#
+</span><span class='line'># start-default-seat = True to always start one seat if none are defined in the configuration
+</span><span class='line'># greeter-user = User to run greeter as
+</span><span class='line'># minimum-display-number = Minimum display number to use for X servers
+</span><span class='line'># minimum-vt = First VT to run displays on
+</span><span class='line'># user-authority-in-system-dir = True if session authority should be in the system location
+</span><span class='line'># guest-account-script = Script to be run to setup guest account
+</span><span class='line'># log-directory = Directory to log information to
+</span><span class='line'># run-directory = Directory to put running state in
+</span><span class='line'># cache-directory = Directory to cache to
+</span><span class='line'># xsessions-directory = Directory to find X sessions
+</span><span class='line'># xgreeters-directory = Directory to find X greeters
+</span><span class='line'>#
+</span><span class='line'>[LightDM]
+</span><span class='line'>#start-default-seat=true
+</span><span class='line'>#greeter-user=lightdm
+</span><span class='line'>#minimum-display-number=0
+</span><span class='line'>#minimum-vt=7
+</span><span class='line'>#user-authority-in-system-dir=false
+</span><span class='line'>#guest-account-script=guest-account
+</span><span class='line'>#log-directory=/var/log/lightdm
+</span><span class='line'>#run-directory=/var/run/lightdm
+</span><span class='line'>#cache-directory=/var/cache/lightdm
+</span><span class='line'>#xsessions-directory=/usr/share/xsessions
+</span><span class='line'>#xgreeters-directory=/usr/share/xgreeters
+</span><span class='line'>
+</span><span class='line'>#
+</span><span class='line'># Seat defaults
+</span><span class='line'>#
+</span><span class='line'># xserver-command = X server command to run
+</span><span class='line'># xserver-layout = Layout to pass to X server
+</span><span class='line'># xserver-config = Config file to pass to X server
+</span><span class='line'># xserver-allow-tcp = True if TCP/IP connections are allowed to this X server
+</span><span class='line'># xdmcp-manager = XDMCP manager to connect to (implies xserver-allow-tcp=true)
+</span><span class='line'># xdmcp-port = XDMCP UDP/IP port to communicate on
+</span><span class='line'># xdmcp-key = Authentication key to use for XDM-AUTHENTICATION-1 (stored in keys.conf)
+</span><span class='line'># greeter-session = Session to load for greeter
+</span><span class='line'># greeter-hide-users = True to hide the user list
+</span><span class='line'># user-session = Session to load for users
+</span><span class='line'># allow-guest = True if guest login is allowed
+</span><span class='line'># guest-session = Session to load for guests (overrides user-session)
+</span><span class='line'># session-wrapper = Wrapper script to run session with
+</span><span class='line'># display-setup-script = Script to run when starting a greeter session (runs as root)
+</span><span class='line'># greeter-setup-script = Script to run when starting a greeter (runs as root)
+</span><span class='line'># session-setup-script = Script to run when starting a user session (runs as root)
+</span><span class='line'># session-cleanup-script = Script to run when quitting a user session (runs as root)
+</span><span class='line'># autologin-guest = True to log in as guest by default
+</span><span class='line'># autologin-user = User to log in with by default (overrides autologin-guest)
+</span><span class='line'># autologin-user-timeout = Number of seconds to wait before loading default user
+</span><span class='line'># autologin-session = Session to load for automatic login (overrides user-session)
+</span><span class='line'># exit-on-failure = True if the daemon should exit if this seat fails
+</span><span class='line'>#
+</span><span class='line'>[SeatDefaults]
+</span><span class='line'>#xserver-command=X
+</span><span class='line'>#xserver-layout=
+</span><span class='line'>#xserver-config=
+</span><span class='line'>#xserver-allow-tcp=false
+</span><span class='line'>#xdmcp-manager=
+</span><span class='line'>#xdmcp-port=177
+</span><span class='line'>#xdmcp-key=
+</span><span class='line'>#greeter-session=example-gtk-gnome
+</span><span class='line'>#greeter-hide-users=false
+</span><span class='line'>#user-session=default
+</span><span class='line'>#allow-guest=true
+</span><span class='line'>#guest-session=UNIMPLEMENTED
+</span><span class='line'>#session-wrapper=lightdm-session
+</span><span class='line'>#display-setup-script=
+</span><span class='line'>#greeter-setup-script=
+</span><span class='line'>#session-setup-script=
+</span><span class='line'>#session-cleanup-script=
+</span><span class='line'>#autologin-guest=false
+</span><span class='line'>#autologin-user=
+</span><span class='line'>#autologin-user-timeout=0
+</span><span class='line'>#autologin-session=UNIMPLEMENTED
+</span><span class='line'>#exit-on-failure=false
+</span><span class='line'>
+</span><span class='line'>#
+</span><span class='line'># Seat configuration
+</span><span class='line'>#
+</span><span class='line'># Each seat must start with &quot;Seat:&quot;.
+</span><span class='line'># Uses settings from [SeatDefaults], any of these can be overriden by setting them in this section.
+</span><span class='line'>#
+</span><span class='line'>#[Seat:0]
+</span><span class='line'>
+</span><span class='line'>#
+</span><span class='line'># XDMCP Server configuration
+</span><span class='line'>#
+</span><span class='line'># enabled = True if XDMCP connections should be allowed
+</span><span class='line'># port = UDP/IP port to listen for connections on
+</span><span class='line'># key = Authentication key to use for XDM-AUTHENTICATION-1 or blank to not
+</span><span class='line'># use authentication (stored in keys.conf)
+</span><span class='line'>#
+</span><span class='line'># The authentication key is a 56 bit DES key specified in hex as 0xnnnnnnnnnnnnnn. Alternatively
+</span><span class='line'># it can be a word and the first 7 characters are used as the key.
+</span><span class='line'>#
+</span><span class='line'>[XDMCPServer]
+</span><span class='line'>#enabled=false
+</span><span class='line'>#port=177
+</span><span class='line'>#key=
+</span><span class='line'>
+</span><span class='line'>#
+</span><span class='line'># VNC Server configuration
+</span><span class='line'>#
+</span><span class='line'># enabled = True if VNC connections should be allowed
+</span><span class='line'># port = TCP/IP port to listen for connections on
+</span><span class='line'>#
+</span><span class='line'>[VNCServer]
+</span><span class='line'>#enabled=false
+</span><span class='line'>#port=5900
+</span><span class='line'>#width=1024
+</span><span class='line'>#height=768
+</span><span class='line'>#depth=8
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>reference:</h2>
+
+<p><a href="http://www.tuxgarage.com/2011/09/setting-lightdm-to-auto-login-oneiric.html">http://www.tuxgarage.com/2011/09/setting-lightdm-to-auto-login-oneiric.html</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Why blogging in english]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/03/20/why-blogging-in-english/"/>
+    <updated>2012-03-20T19:09:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/03/20/why-blogging-in-english</id>
+    <content type="html"><![CDATA[<p><img src="http://dreaming-in-digital.me/images/english.jpg"></p>
+
+<p>I am blogging in english is not because I hate chinese, contrarily, I think it is the best language for human being. We don’t need to invent a million words to explain everything, for example pig meat is pig meat in chinese, but in english pig meat is pork, the reason is the pronunciation of pig meat is too long for a high frequently used word, so people have to invent a new word.  Where chinese just need a two character word with two simple syllable each meaning pig and meat. there are thousands of  similar examples in english especially in expert language.  As a result english speaker end up with a dictionary containing a million different words to explain the whole human history where  chinese speaker only need 8 thousand chinese charater to create a million different meanings. On the surface chinese character is complicate, but deep inside It’s simple and elegant. Compare to English it has a higher entropy, which means it carries more information within same word length. I am blogging in English just because it’s a wildly used language in present.</p>
+
+<!-- more -->
+
+
+<p>But writing stuff in english is actually extremely difficult for me, because I have never learned english in a proper way, well, I mean academic way. In china english teaching starting from primary school, and up to college, add up to 16 years of english education. I did try to learn the english alphabetic in primary school, but I quit learning english in junior school because I hate gramma. I thought I can speak perfect chinese without learning chinese gramma, I can do the same with english. Since then all the english words and skills I learned is from western movies , english website, computer games and occasionally a glance of the word list on the english text book. Still, I think the best way of learning english is by practicing, so here I am, blogging in English.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The very first post]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/03/16/the-very-first-post/"/>
+    <updated>2012-03-16T16:35:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/03/16/the-very-first-post</id>
+    <content type="html"><![CDATA[<p>In the past two days I&#8217;ve been working my butt off to set up this blog. It&#8217;s not my first time to set up a website, but it is my first time to set up a octopress site, and host it on a online <code>Rack PasS</code>, and let it pass through china&#8217;s <code>GFW</code> (a network filter that blocking foreign websites which china government consider as a threat).</p>
+
+<p><img class="left" src="http://dreaming-in-digital.me/images/logo.png" width="200" height="200" title="logo" ></p>
+
+<p>I have also slightly alter the site theme. I like the default theme, so I just made a logo using photoshop and slightly changed the background. The difficult part is modify the <code>SASS</code> to let the page header adjust it’s size automatically, so my blog looks better on smartphones or any other handheld device. Octopress is very well organized, but even still, I had no clue what SASS is, and how to modify it.  After guessing and testing all the SASS code of the default theme I kind of figure out how it works. After a few hours of twisting I finally get it done.<!-- more --></p>
+
+<p>Now, take a look at this beautiful syntax highlitght engine it has:</p>
+
+<figure class='code'><figcaption><span> (test.js)</span> <a href='http://dreaming-in-digital.me/downloads/code/test.js'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/**</span>
+</span><span class='line'><span class="cm">sample javascript from xui</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="kc">undefined</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">xui</span><span class="p">,</span>
+</span><span class='line'>    <span class="nb">window</span>     <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">string</span>     <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nb">document</span>   <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">simpleExpr</span> <span class="o">=</span> <span class="sr">/^#?([\w-]+)$/</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">idExpr</span>     <span class="o">=</span> <span class="sr">/^#/</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">tagExpr</span>    <span class="o">=</span> <span class="sr">/&lt;([\w:]+)/</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">ret</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">e</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span> <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span> <span class="p">};</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">x$</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">xui</span> <span class="o">=</span> <span class="nx">xui</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="k">new</span> <span class="nx">xui</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">q</span><span class="p">,</span> <span class="nx">context</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>it&#8217;s one of my wish to have such gorgeous, elegant and user friendly code highlitghter in my blog. I&#8217;m in heaven!</p>
+]]></content>
+  </entry>
+  
+</feed>

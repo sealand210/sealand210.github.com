@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: lion | Dreaming in Digital]]></title>
+  <link href="http://dreaming-in-digital.me/blog/categories/lion/atom.xml" rel="self"/>
+  <link href="http://dreaming-in-digital.me/"/>
+  <updated>2012-04-22T16:39:59+08:00</updated>
+  <id>http://dreaming-in-digital.me/</id>
+  <author>
+    <name><![CDATA[Evan Hung]]></name>
+    <email><![CDATA[mail2evan@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Disable internal display in lion]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/04/02/disable-internal-display-on-lion/"/>
+    <updated>2012-04-02T14:54:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/04/02/disable-internal-display-on-lion</id>
+    <content type="html"><![CDATA[<p><img src="/images/macbook-pro-with-dual-cinema-displays.jpeg"></p>
+
+<p>Some MacBook Pro or Air users may want to disable their internal screen when the laptop is connected to an external display, this is generally <a href="http://osxdaily.com/2011/01/14/turn-off-the-macbook-or-macbook-pro-screen-with-the-computer-still-on/">achieved in two ways</a> but since Mac OS X 10.7 the internal screen is more persistent and wants to stay on.</p>
+
+<p>To disable the internal screen for OS X Lion based laptops, launch the Terminal and enter the following command:</p>
+
+<pre><code>sudo nvram boot-args="iog=0x0"
+</code></pre>
+
+<!-- more -->
+
+
+<p>You’ll need to reboot for changes to take effect, and the internal display will then be completely disabled regardless of whether the Mac is open or closed.</p>
+
+<p>To undo this, you can go back to the Terminal and enter:</p>
+
+<pre><code>sudo nvram -d boot-args
+</code></pre>
+
+<p>Then reboot again, or you can just <a href="http://osxdaily.com/2010/11/15/reset-pram-mac/">zap PRAM</a> by holding down <code>Command+Option+P+R</code> during reboot, which clears out the boot-args as well. If you were to disconnect the MacBook Pro from an external video source, zapping the PRAM would be how you’d want to reenable the internal display.</p>
+
+<p>This is the opposite of “<a href="http://osxdaily.com/2010/04/15/how-to-use-a-macbook-or-macbook-pro-with-the-lid-closed-and-hooked-to-an-external-monitor/">clamshell mode</a>” – where the Mac laptop is closed and the screen is still turned on. Clamshell can look nice, but without adequate air flow the Mac may overheat, thus running the computer with the display open is recommended. If you’re going to do this, be sure to set the <a href="http://osxdaily.com/2010/04/27/set-the-primary-display-mac/">primary display</a> so that the menubar, Dock, and alert windows go to the proper screen.</p>
+
+<p>Thanks to Marcus for the tip via a thread on <a href="https://discussions.apple.com/thread/3190417?start=180&amp;tstart=0">Apple Discussions</a></p>
+
+<h2>References:</h2>
+
+<p><a href="http://osxdaily.com/2011/09/14/disable-the-internal-screen-on-a-macbook-pro-or-air-in-mac-os-x-10-7-lion/">http://osxdaily.com/2011/09/14/disable-the-internal-screen-on-a-macbook-pro-or-air-in-mac-os-x-10-7-lion/</a></p>
+]]></content>
+  </entry>
+  
+</feed>

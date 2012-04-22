@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Dreaming in Digital - A blog by Evan Hung</title>
+  <meta name="author" content="Evan Hung">
+
+  
+  <meta name="description" content="linux, ios, mac, arduino, design, digital">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dreaming-in-digital.me/notes/github-commands.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Dreaming in Digital" type="application/atom+xml">
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30026048-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner"><div style="display: block; margin-left: 0; margin-right: auto; max-width: 100%; width: 850px; padding-bottom: -1.75em;">
+<a href="/">
+	<img src="/images/logo.png" style="max-width:100%;"/>
+</a>
+</div>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dreaming-in-digital.me" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/my-collections">My Collections</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <p>转到你的工作目录</p>
+
+<pre><code>roy@ubuntu:~/$ cd workspace
+</code></pre>
+
+<p>创建、下载项目文件夹（不知道是不是该叫它“包”）</p>
+
+<pre><code>roy@ubuntu:~/workspace$ git clone git://github.com/royzhu/test.git
+</code></pre>
+
+<p>等待一段时间后，项目就下好了</p>
+
+<pre><code>roy@ubuntu:~/workspace$ ls -la
+
+drwxr-xr-x 3 roy roy 4096 2008-04-29 17:10 test
+
+roy@ubuntu:~/workspace$ cd test
+</code></pre>
+
+<p>查看主枝和分支。登录GitHub.com，加入项目后，在项目里的Network有图形化的分支图</p>
+
+<pre><code>roy@ubuntu:~/workspace/test$ git show-branch
+[master] a new branch
+</code></pre>
+
+<p>master是默认的住分支名</p>
+
+<p>建立项目远程地址</p>
+
+<pre><code>roy@ubuntu:~/workspace/test$ git remote add origin  git@github.com:royzhu/test.git
+</code></pre>
+
+<p>建立自己的分支</p>
+
+<pre><code>roy@ubuntu:~/workspace/test$ git branch your_branch_name
+</code></pre>
+
+<p>再看看有哪些分支</p>
+
+<pre><code>roy@ubuntu:~/workspace/test$ git show-branch
+! [your_branch_name] a new branch
+--
+*+ [master] a new branch
+</code></pre>
+
+<p>查看现在使用的分支</p>
+
+<pre><code>roy@ubuntu:~/workspace/test$ git branch
+* master
+your_branch_name
+</code></pre>
+
+<p>加*号表示当前使用的分支</p>
+
+<p>进入自己的分支</p>
+
+<pre><code>roy@ubuntu:~/workspace/test$ git checkout your_branch_name
+</code></pre>
+
+<p>再看看</p>
+
+<pre><code>roy@ubuntu:~/workspace/test$ git branch
+master
+* your_branch_name
+</code></pre>
+
+<p>添加、修改些东西吧</p>
+
+<pre><code>roy@ubuntu:~/workspace/test$ vim something
+</code></pre>
+
+<p>把文件加入跟踪（每次提交前必须写这步）</p>
+
+<pre><code>roy@ubuntu:~/workspace/test$ git add something
+</code></pre>
+
+<p>提交修改（提交到本地，没有传到服务器）</p>
+
+<pre><code>roy@ubuntu:~/workspace/test$ git commit -m '说明'
+</code></pre>
+
+<p>提交分支到服务器</p>
+
+<pre><code>roy@ubuntu:~/workspace/test$ git push origin    your_branch_name
+“origin”是固定的
+</code></pre>
+
+<p>获得最新的项目文件（从服务器下载）
+  </p>
+
+<pre><code>roy@ubuntu:~/workspace/test$ git pull git://github.com/ royzhu/test.git
+</code></pre>
+
+  
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Evan Hung -
+  <span class="credit">Host on <a href="http://heroku.com">Heroku</a> - Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'd-i-d';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

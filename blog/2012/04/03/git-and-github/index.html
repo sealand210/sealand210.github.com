@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Git &amp; Github - Dreaming in Digital - A blog by Evan Hung</title>
+  <meta name="author" content="Evan Hung">
+
+  
+  <meta name="description" content="linux, ios, mac, arduino, design, digital">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dreaming-in-digital.me/blog/2012/04/03/git-and-github">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Dreaming in Digital" type="application/atom+xml">
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30026048-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner"><div style="display: block; margin-left: 0; margin-right: auto; max-width: 100%; width: 850px; padding-bottom: -1.75em;">
+<a href="/">
+	<img src="/images/logo.png" style="max-width:100%;"/>
+</a>
+</div>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dreaming-in-digital.me" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/my-collections">My Collections</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Git &amp; Github</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-03T22:32:00+08:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img src="/images/githuboctacat.jpg"></p>
+
+<h2>GIT</h2>
+
+<p>I&#8217;ve been using git and github to modify and update my code recently,  and I found it’s fantastic, I should learn to use them earlier.   A great thing about Git is,  you can use it to create multiple versions of your code and Git will keep tracking your modifications. In Git, create a copy is called branching. To create a branch you just need to type in a line of very simple command under your working directory:</p>
+
+<pre><code>$ git branch your_branch_name
+</code></pre>
+
+<!-- more -->
+
+
+<p>A new copy (branch) named your_branch_name is created, to enter that branch, simply type:</p>
+
+<pre><code>$ git checkout your_branch_name
+</code></pre>
+
+<p>The default branch is master branch, so if you didn’t create any branches then you are in master branch. Good thing about using branch is, editing any branch within the same directory will not change other branches. So you can do any experimentation you want using branch without worrying about damage the main code. If you found your experimentation with that branch has gone to a dead end,  you can simply delete the branch:</p>
+
+<pre><code>$ git branch -D your_branch_name
+</code></pre>
+
+<p>There are two options of deleting a branch:</p>
+
+<pre><code>-d Delete a branch. The branch must be fully merged in its upstream branch,
+   or in HEAD if no upstream was set with --track or --set-upstream.
+
+-D Delete a branch irrespective of its merged status.
+</code></pre>
+
+<p>After deleting the branch, you can go back to your master branch:</p>
+
+<pre><code>  $ git checkout master
+</code></pre>
+
+<p>Everything is back to original.</p>
+
+<p>Another thing about branch is, you can merge branches using merge command:</p>
+
+<pre><code>$ git merge branch_name
+</code></pre>
+
+<p>This command will merge the branch_name to your active branch, git will tries to auto-merge changes. Unfortunately, this is not always possible and results in conflicts. You are responsible to merge those conflicts manually by editing the files shown by git.</p>
+
+<p>Another great thing about Git is, any modification of your code is temporary, this stage is called <code>Index</code>. To start tracking your code, use add command:</p>
+
+<pre><code>$ git add your_file_name
+</code></pre>
+
+<p>To track all your file you can use following command:</p>
+
+<pre><code>$ git add .  #tstages new and modified, without deleted
+$ git add -u #stages modified and deleted, without new
+$ git add -A #stages All
+</code></pre>
+
+<p> Then you can edit your code, compile it and run it. But after that if you don’t like your modifications, you can undo it with checkout command:</p>
+
+<pre><code>$ git checkout your_file_name
+</code></pre>
+
+<p>If you like your modifications, just use commit command:</p>
+
+<pre><code>$ git commit -m “update message”
+</code></pre>
+
+<p>Now the file is committed to the HEAD, which points to the last commit you&#8217;ve made.</p>
+
+<p>You can always use status command to checkout which branch you are in and what modifications you have done:</p>
+
+<pre><code>$ git status
+</code></pre>
+
+<p>To view all your histories in GUI, just type:</p>
+
+<pre><code>$ gitk
+</code></pre>
+
+<h2>GITHUB</h2>
+
+<p>Github is web service that put your local repository online, so people can share their code and work together.</p>
+
+<p>To clone a remote repository just type:</p>
+
+<pre><code>$ git clone /path/to/repository
+</code></pre>
+
+<p>To push your local repository to remote just type:</p>
+
+<pre><code>$ git push origin your_branch_name
+</code></pre>
+
+<p>If you have not cloned an existing repository and want to connect your repository to a remote server, you need to add it with
+   $ git remote add origin <server>
+ Now you are able to push your changes to the selected remote server</p>
+
+<p>If you have cloned an existing repository but you want to change url, you can change it with:</p>
+
+<pre><code>$ git remote set-url origin &lt;server&gt; 
+</code></pre>
+
+<p>Some time if your local history is lost, git will not upload your code to prevent losing data and history, you can use -f to force upload your code, but that is not always a good idea.</p>
+
+<p>That’s so far that I have learned,  and I am just scratching the surface right now, when I have fully understand git, I will come back and update this post.</p>
+
+<h2>References:</h2>
+
+<p><a href="http://rogerdudler.github.com/git-guide/index.html">http://rogerdudler.github.com/git-guide/index.html</a></p>
+
+<p><a href="http://linux.die.net/man/1/git-branch">http://linux.die.net/man/1/git-branch</a></p>
+
+<p><a href="http://stackoverflow.com/questions/572549/difference-of-git-add-a-and-git-add">http://stackoverflow.com/questions/572549/difference-of-git-add-a-and-git-add</a>
+<a href="http://hi.baidu.com/royzhu/blog/item/c3499159f506522f2834f0f1.html">http://hi.baidu.com/royzhu/blog/item/c3499159f506522f2834f0f1.html</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Evan Hung</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-03T22:32:00+08:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/04/02/disable-internal-display-on-lion/" title="Previous Post: Disable internal display in lion">&laquo; Disable internal display in lion</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/04/22/akg-k518dj-single-entry-with-detachable-cable-modification/" title="next Post: AKG K518DJ detachable cable modification">AKG K518DJ detachable cable modification &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Evan Hung -
+  <span class="credit">Host on <a href="http://heroku.com">Heroku</a> - Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'd-i-d';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://dreaming-in-digital.me/blog/2012/04/03/git-and-github/';
+        var disqus_url = 'http://dreaming-in-digital.me/blog/2012/04/03/git-and-github/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

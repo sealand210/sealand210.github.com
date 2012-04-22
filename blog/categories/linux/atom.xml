@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: linux | Dreaming in Digital]]></title>
+  <link href="http://dreaming-in-digital.me/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://dreaming-in-digital.me/"/>
+  <updated>2012-04-22T16:39:59+08:00</updated>
+  <id>http://dreaming-in-digital.me/</id>
+  <author>
+    <name><![CDATA[Evan Hung]]></name>
+    <email><![CDATA[mail2evan@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Ubuntu LightDM]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/03/30/setting-lightdm/"/>
+    <updated>2012-03-30T23:57:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/03/30/setting-lightdm</id>
+    <content type="html"><![CDATA[<p><img src="/images/LightDM.png"></p>
+
+<p>Ubuntu Oneiric comes with a new display/login manager - <code>LightDM</code>. Just like setting <code>GDM</code>, <code>XDM</code> or <code>KDM</code> etc., LightDM can also be set to auto-login by creating a custom file named <code>lightdm.conf</code> under <code>/etc/lightdm</code> directory. This way you can also define your preferred auto-login session.</p>
+
+<p>So, get to a Terminal and run:</p>
+
+<pre><code>gksudo gedit /etc/lightdm/lightdm.conf
+</code></pre>
+
+<p>If you are doing it from the console, you would need to use 'nano' instead of 'gedit' and 'sudo' instead o 'gksudo'.</p>
+
+<p>In the file that opens up, enter this text:
+<code>
+[SeatDefaults]
+autologin-user=&lt;USERNAME&gt;
+autologin-user-timeout=0
+user-session=ubuntu
+greeter-session=unity-greeter
+</code></p>
+
+<!-- more -->
+
+
+<p>  <br/>
+Replace '<USERNAME>' with your username and 'ubuntu' with your preferred session if you want to automatically log in to some other session than regular Unity. These are the most common session options:</p>
+
+<p><code>Ubuntu</code> (regular Unity) :<code>ubuntu</code>  <br/>
+<code>Ubuntu 2D</code> (Unity 2D) :<code>ubuntu-2d</code>   <br/>
+<code>GNOME</code> (Gnome Shell) :<code>gnome-shell</code>    <br/>
+<code>GNOME Classic</code> :<code>gnome-classic</code>  <br/>
+<code>GNOME Classic (No effects)</code> :<code>gnome-fallback</code></p>
+
+<h2>Timed Auto-Login and More Advanced Options</h2>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>lightDM setting  (lightdm.conf)</span> <a href='/downloads/code/lightdm.conf'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+</pre></td><td class='code'><pre><code class='tex'><span class='line'>#
+</span><span class='line'># General configuration
+</span><span class='line'>#
+</span><span class='line'># start-default-seat = True to always start one seat if none are defined in the configuration
+</span><span class='line'># greeter-user = User to run greeter as
+</span><span class='line'># minimum-display-number = Minimum display number to use for X servers
+</span><span class='line'># minimum-vt = First VT to run displays on
+</span><span class='line'># user-authority-in-system-dir = True if session authority should be in the system location
+</span><span class='line'># guest-account-script = Script to be run to setup guest account
+</span><span class='line'># log-directory = Directory to log information to
+</span><span class='line'># run-directory = Directory to put running state in
+</span><span class='line'># cache-directory = Directory to cache to
+</span><span class='line'># xsessions-directory = Directory to find X sessions
+</span><span class='line'># xgreeters-directory = Directory to find X greeters
+</span><span class='line'>#
+</span><span class='line'>[LightDM]
+</span><span class='line'>#start-default-seat=true
+</span><span class='line'>#greeter-user=lightdm
+</span><span class='line'>#minimum-display-number=0
+</span><span class='line'>#minimum-vt=7
+</span><span class='line'>#user-authority-in-system-dir=false
+</span><span class='line'>#guest-account-script=guest-account
+</span><span class='line'>#log-directory=/var/log/lightdm
+</span><span class='line'>#run-directory=/var/run/lightdm
+</span><span class='line'>#cache-directory=/var/cache/lightdm
+</span><span class='line'>#xsessions-directory=/usr/share/xsessions
+</span><span class='line'>#xgreeters-directory=/usr/share/xgreeters
+</span><span class='line'>
+</span><span class='line'>#
+</span><span class='line'># Seat defaults
+</span><span class='line'>#
+</span><span class='line'># xserver-command = X server command to run
+</span><span class='line'># xserver-layout = Layout to pass to X server
+</span><span class='line'># xserver-config = Config file to pass to X server
+</span><span class='line'># xserver-allow-tcp = True if TCP/IP connections are allowed to this X server
+</span><span class='line'># xdmcp-manager = XDMCP manager to connect to (implies xserver-allow-tcp=true)
+</span><span class='line'># xdmcp-port = XDMCP UDP/IP port to communicate on
+</span><span class='line'># xdmcp-key = Authentication key to use for XDM-AUTHENTICATION-1 (stored in keys.conf)
+</span><span class='line'># greeter-session = Session to load for greeter
+</span><span class='line'># greeter-hide-users = True to hide the user list
+</span><span class='line'># user-session = Session to load for users
+</span><span class='line'># allow-guest = True if guest login is allowed
+</span><span class='line'># guest-session = Session to load for guests (overrides user-session)
+</span><span class='line'># session-wrapper = Wrapper script to run session with
+</span><span class='line'># display-setup-script = Script to run when starting a greeter session (runs as root)
+</span><span class='line'># greeter-setup-script = Script to run when starting a greeter (runs as root)
+</span><span class='line'># session-setup-script = Script to run when starting a user session (runs as root)
+</span><span class='line'># session-cleanup-script = Script to run when quitting a user session (runs as root)
+</span><span class='line'># autologin-guest = True to log in as guest by default
+</span><span class='line'># autologin-user = User to log in with by default (overrides autologin-guest)
+</span><span class='line'># autologin-user-timeout = Number of seconds to wait before loading default user
+</span><span class='line'># autologin-session = Session to load for automatic login (overrides user-session)
+</span><span class='line'># exit-on-failure = True if the daemon should exit if this seat fails
+</span><span class='line'>#
+</span><span class='line'>[SeatDefaults]
+</span><span class='line'>#xserver-command=X
+</span><span class='line'>#xserver-layout=
+</span><span class='line'>#xserver-config=
+</span><span class='line'>#xserver-allow-tcp=false
+</span><span class='line'>#xdmcp-manager=
+</span><span class='line'>#xdmcp-port=177
+</span><span class='line'>#xdmcp-key=
+</span><span class='line'>#greeter-session=example-gtk-gnome
+</span><span class='line'>#greeter-hide-users=false
+</span><span class='line'>#user-session=default
+</span><span class='line'>#allow-guest=true
+</span><span class='line'>#guest-session=UNIMPLEMENTED
+</span><span class='line'>#session-wrapper=lightdm-session
+</span><span class='line'>#display-setup-script=
+</span><span class='line'>#greeter-setup-script=
+</span><span class='line'>#session-setup-script=
+</span><span class='line'>#session-cleanup-script=
+</span><span class='line'>#autologin-guest=false
+</span><span class='line'>#autologin-user=
+</span><span class='line'>#autologin-user-timeout=0
+</span><span class='line'>#autologin-session=UNIMPLEMENTED
+</span><span class='line'>#exit-on-failure=false
+</span><span class='line'>
+</span><span class='line'>#
+</span><span class='line'># Seat configuration
+</span><span class='line'>#
+</span><span class='line'># Each seat must start with &quot;Seat:&quot;.
+</span><span class='line'># Uses settings from [SeatDefaults], any of these can be overriden by setting them in this section.
+</span><span class='line'>#
+</span><span class='line'>#[Seat:0]
+</span><span class='line'>
+</span><span class='line'>#
+</span><span class='line'># XDMCP Server configuration
+</span><span class='line'>#
+</span><span class='line'># enabled = True if XDMCP connections should be allowed
+</span><span class='line'># port = UDP/IP port to listen for connections on
+</span><span class='line'># key = Authentication key to use for XDM-AUTHENTICATION-1 or blank to not
+</span><span class='line'># use authentication (stored in keys.conf)
+</span><span class='line'>#
+</span><span class='line'># The authentication key is a 56 bit DES key specified in hex as 0xnnnnnnnnnnnnnn. Alternatively
+</span><span class='line'># it can be a word and the first 7 characters are used as the key.
+</span><span class='line'>#
+</span><span class='line'>[XDMCPServer]
+</span><span class='line'>#enabled=false
+</span><span class='line'>#port=177
+</span><span class='line'>#key=
+</span><span class='line'>
+</span><span class='line'>#
+</span><span class='line'># VNC Server configuration
+</span><span class='line'>#
+</span><span class='line'># enabled = True if VNC connections should be allowed
+</span><span class='line'># port = TCP/IP port to listen for connections on
+</span><span class='line'>#
+</span><span class='line'>[VNCServer]
+</span><span class='line'>#enabled=false
+</span><span class='line'>#port=5900
+</span><span class='line'>#width=1024
+</span><span class='line'>#height=768
+</span><span class='line'>#depth=8
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>reference:</h2>
+
+<p><a href="http://www.tuxgarage.com/2011/09/setting-lightdm-to-auto-login-oneiric.html">http://www.tuxgarage.com/2011/09/setting-lightdm-to-auto-login-oneiric.html</a></p>
+]]></content>
+  </entry>
+  
+</feed>

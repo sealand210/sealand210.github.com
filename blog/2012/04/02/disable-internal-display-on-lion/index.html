@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Disable internal display in lion - Dreaming in Digital - A blog by Evan Hung</title>
+  <meta name="author" content="Evan Hung">
+
+  
+  <meta name="description" content="linux, ios, mac, arduino, design, digital">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dreaming-in-digital.me/blog/2012/04/02/disable-internal-display-on-lion">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Dreaming in Digital" type="application/atom+xml">
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30026048-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner"><div style="display: block; margin-left: 0; margin-right: auto; max-width: 100%; width: 850px; padding-bottom: -1.75em;">
+<a href="/">
+	<img src="/images/logo.png" style="max-width:100%;"/>
+</a>
+</div>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dreaming-in-digital.me" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/my-collections">My Collections</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Disable Internal Display in Lion</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-02T14:54:00+08:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img src="/images/macbook-pro-with-dual-cinema-displays.jpeg"></p>
+
+<p>Some MacBook Pro or Air users may want to disable their internal screen when the laptop is connected to an external display, this is generally <a href="http://osxdaily.com/2011/01/14/turn-off-the-macbook-or-macbook-pro-screen-with-the-computer-still-on/">achieved in two ways</a> but since Mac OS X 10.7 the internal screen is more persistent and wants to stay on.</p>
+
+<p>To disable the internal screen for OS X Lion based laptops, launch the Terminal and enter the following command:</p>
+
+<pre><code>sudo nvram boot-args="iog=0x0"
+</code></pre>
+
+<!-- more -->
+
+
+<p>You’ll need to reboot for changes to take effect, and the internal display will then be completely disabled regardless of whether the Mac is open or closed.</p>
+
+<p>To undo this, you can go back to the Terminal and enter:</p>
+
+<pre><code>sudo nvram -d boot-args
+</code></pre>
+
+<p>Then reboot again, or you can just <a href="http://osxdaily.com/2010/11/15/reset-pram-mac/">zap PRAM</a> by holding down <code>Command+Option+P+R</code> during reboot, which clears out the boot-args as well. If you were to disconnect the MacBook Pro from an external video source, zapping the PRAM would be how you’d want to reenable the internal display.</p>
+
+<p>This is the opposite of “<a href="http://osxdaily.com/2010/04/15/how-to-use-a-macbook-or-macbook-pro-with-the-lid-closed-and-hooked-to-an-external-monitor/">clamshell mode</a>” – where the Mac laptop is closed and the screen is still turned on. Clamshell can look nice, but without adequate air flow the Mac may overheat, thus running the computer with the display open is recommended. If you’re going to do this, be sure to set the <a href="http://osxdaily.com/2010/04/27/set-the-primary-display-mac/">primary display</a> so that the menubar, Dock, and alert windows go to the proper screen.</p>
+
+<p>Thanks to Marcus for the tip via a thread on <a href="https://discussions.apple.com/thread/3190417?start=180&amp;tstart=0">Apple Discussions</a></p>
+
+<h2>References:</h2>
+
+<p><a href="http://osxdaily.com/2011/09/14/disable-the-internal-screen-on-a-macbook-pro-or-air-in-mac-os-x-10-7-lion/">http://osxdaily.com/2011/09/14/disable-the-internal-screen-on-a-macbook-pro-or-air-in-mac-os-x-10-7-lion/</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Evan Hung</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-02T14:54:00+08:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/osx/'>OSX</a>, <a class='category' href='/blog/categories/lion/'>lion</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/03/30/setting-lightdm/" title="Previous Post: Setting Ubuntu LightDM">&laquo; Setting Ubuntu LightDM</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/04/03/git-and-github/" title="next Post: Git &amp; Github">Git &amp; Github &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Evan Hung -
+  <span class="credit">Host on <a href="http://heroku.com">Heroku</a> - Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'd-i-d';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://dreaming-in-digital.me/blog/2012/04/02/disable-internal-display-on-lion/';
+        var disqus_url = 'http://dreaming-in-digital.me/blog/2012/04/02/disable-internal-display-on-lion/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
