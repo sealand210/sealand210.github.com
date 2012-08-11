@@ -4,7 +4,7 @@
   <title><![CDATA[Dreaming in Digital]]></title>
   <link href="http://dreaming-in-digital.me/atom.xml" rel="self"/>
   <link href="http://dreaming-in-digital.me/"/>
-  <updated>2012-04-30T22:29:10+08:00</updated>
+  <updated>2012-08-11T22:00:02+08:00</updated>
   <id>http://dreaming-in-digital.me/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
@@ -36,127 +36,6 @@
 <p><img src="http://dreaming-in-digital.me/images/518dj-4.jpg"></p>
 
 <p><img src="http://dreaming-in-digital.me/images/518dj-5.jpg"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Git &amp; Github]]></title>
-    <link href="http://dreaming-in-digital.me/blog/2012/04/03/git-and-github/"/>
-    <updated>2012-04-03T22:32:00+08:00</updated>
-    <id>http://dreaming-in-digital.me/blog/2012/04/03/git-and-github</id>
-    <content type="html"><![CDATA[<p><img src="http://dreaming-in-digital.me/images/githuboctacat.jpg"></p>
-
-<h2>GIT</h2>
-
-<p>I&#8217;ve been using git and github to modify and update my code recently,  and I found it’s fantastic, I should learn to use them earlier.   A great thing about Git is,  you can use it to create multiple versions of your code and Git will keep tracking your modifications. In Git, create a copy is called branching. To create a branch you just need to type in a line of very simple command under your working directory:</p>
-
-<pre><code>$ git branch your_branch_name
-</code></pre>
-
-<!-- more -->
-
-
-<p>A new copy (branch) named your_branch_name is created, to enter that branch, simply type:</p>
-
-<pre><code>$ git checkout your_branch_name
-</code></pre>
-
-<p>The default branch is master branch, so if you didn’t create any branches then you are in master branch. Good thing about using branch is, editing any branch within the same directory will not change other branches. So you can do any experimentation you want using branch without worrying about damage the main code. If you found your experimentation with that branch has gone to a dead end,  you can simply delete the branch:</p>
-
-<pre><code>$ git branch -D your_branch_name
-</code></pre>
-
-<p>There are two options of deleting a branch:</p>
-
-<pre><code>-d Delete a branch. The branch must be fully merged in its upstream branch,
-   or in HEAD if no upstream was set with --track or --set-upstream.
-
--D Delete a branch irrespective of its merged status.
-</code></pre>
-
-<p>After deleting the branch, you can go back to your master branch:</p>
-
-<pre><code>  $ git checkout master
-</code></pre>
-
-<p>Everything is back to original.</p>
-
-<p>Another thing about branch is, you can merge branches using merge command:</p>
-
-<pre><code>$ git merge branch_name
-</code></pre>
-
-<p>This command will merge the branch_name to your active branch, git will tries to auto-merge changes. Unfortunately, this is not always possible and results in conflicts. You are responsible to merge those conflicts manually by editing the files shown by git.</p>
-
-<p>Another great thing about Git is, any modification of your code is temporary, this stage is called <code>Index</code>. To start tracking your code, use add command:</p>
-
-<pre><code>$ git add your_file_name
-</code></pre>
-
-<p>To track all your file you can use following command:</p>
-
-<pre><code>$ git add .  #tstages new and modified, without deleted
-$ git add -u #stages modified and deleted, without new
-$ git add -A #stages All
-</code></pre>
-
-<p> Then you can edit your code, compile it and run it. But after that if you don’t like your modifications, you can undo it with checkout command:</p>
-
-<pre><code>$ git checkout your_file_name
-</code></pre>
-
-<p>If you like your modifications, just use commit command:</p>
-
-<pre><code>$ git commit -m “update message”
-</code></pre>
-
-<p>Now the file is committed to the HEAD, which points to the last commit you&#8217;ve made.</p>
-
-<p>You can always use status command to checkout which branch you are in and what modifications you have done:</p>
-
-<pre><code>$ git status
-</code></pre>
-
-<p>To view all your histories in GUI, just type:</p>
-
-<pre><code>$ gitk
-</code></pre>
-
-<h2>GITHUB</h2>
-
-<p>Github is web service that put your local repository online, so people can share their code and work together.</p>
-
-<p>To clone a remote repository just type:</p>
-
-<pre><code>$ git clone /path/to/repository
-</code></pre>
-
-<p>To push your local repository to remote just type:</p>
-
-<pre><code>$ git push origin your_branch_name
-</code></pre>
-
-<p>If you have not cloned an existing repository and want to connect your repository to a remote server, you need to add it with
-   $ git remote add origin <server>
- Now you are able to push your changes to the selected remote server</p>
-
-<p>If you have cloned an existing repository but you want to change url, you can change it with:</p>
-
-<pre><code>$ git remote set-url origin &lt;server&gt; 
-</code></pre>
-
-<p>Some time if your local history is lost, git will not upload your code to prevent losing data and history, you can use -f to force upload your code, but that is not always a good idea.</p>
-
-<p>That’s so far that I have learned,  and I am just scratching the surface right now, when I have fully understand git, I will come back and update this post.</p>
-
-<h2>References:</h2>
-
-<p><a href="http://rogerdudler.github.com/git-guide/index.html">http://rogerdudler.github.com/git-guide/index.html</a></p>
-
-<p><a href="http://linux.die.net/man/1/git-branch">http://linux.die.net/man/1/git-branch</a></p>
-
-<p><a href="http://stackoverflow.com/questions/572549/difference-of-git-add-a-and-git-add">http://stackoverflow.com/questions/572549/difference-of-git-add-a-and-git-add</a>
-<a href="http://hi.baidu.com/royzhu/blog/item/c3499159f506522f2834f0f1.html">http://hi.baidu.com/royzhu/blog/item/c3499159f506522f2834f0f1.html</a></p>
 ]]></content>
   </entry>
   
@@ -475,22 +354,6 @@ Replace &#8217;<USERNAME>&#8217; with your username and &#8216;ubuntu&#8217; wit
 <h2>reference:</h2>
 
 <p><a href="http://www.tuxgarage.com/2011/09/setting-lightdm-to-auto-login-oneiric.html">http://www.tuxgarage.com/2011/09/setting-lightdm-to-auto-login-oneiric.html</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Why blogging in english]]></title>
-    <link href="http://dreaming-in-digital.me/blog/2012/03/20/why-blogging-in-english/"/>
-    <updated>2012-03-20T19:09:00+08:00</updated>
-    <id>http://dreaming-in-digital.me/blog/2012/03/20/why-blogging-in-english</id>
-    <content type="html"><![CDATA[<p><img src="http://dreaming-in-digital.me/images/english.jpg"></p>
-
-<p>I am blogging in english is not because I hate chinese, contrarily, I think it is the best language for human being. We don’t need to invent a million words to explain everything, for example pig meat is pig meat in chinese, but in english pig meat is pork, the reason is the pronunciation of pig meat is too long for a high frequently used word, so people have to invent a new word.  Where chinese just need a two character word with two simple syllable each meaning pig and meat. there are thousands of  similar examples in english especially in expert language.  As a result english speaker end up with a dictionary containing a million different words to explain the whole human history where  chinese speaker only need 8 thousand chinese charater to create a million different meanings. On the surface chinese character is complicate, but deep inside It’s simple and elegant. Compare to English it has a higher entropy, which means it carries more information within same word length. I am blogging in English just because it’s a wildly used language in present.</p>
-
-<!-- more -->
-
-
-<p>But writing stuff in english is actually extremely difficult for me, because I have never learned english in a proper way, well, I mean academic way. In china english teaching starting from primary school, and up to college, add up to 16 years of english education. I did try to learn the english alphabetic in primary school, but I quit learning english in junior school because I hate gramma. I thought I can speak perfect chinese without learning chinese gramma, I can do the same with english. Since then all the english words and skills I learned is from western movies , english website, computer games and occasionally a glance of the word list on the english text book. Still, I think the best way of learning english is by practicing, so here I am, blogging in English.</p>
 ]]></content>
   </entry>
   
