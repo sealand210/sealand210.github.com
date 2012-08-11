@@ -4,7 +4,7 @@
   <title><![CDATA[Dreaming in Digital]]></title>
   <link href="http://dreaming-in-digital.me/atom.xml" rel="self"/>
   <link href="http://dreaming-in-digital.me/"/>
-  <updated>2012-08-11T22:00:02+08:00</updated>
+  <updated>2012-08-11T22:57:23+08:00</updated>
   <id>http://dreaming-in-digital.me/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
@@ -364,7 +364,7 @@ Replace &#8217;<USERNAME>&#8217; with your username and &#8216;ubuntu&#8217; wit
     <id>http://dreaming-in-digital.me/blog/2012/03/16/the-very-first-post</id>
     <content type="html"><![CDATA[<p>In the past two days I&#8217;ve been working my butt off to set up this blog. It&#8217;s not my first time to set up a website, but it is my first time to set up a octopress site, and host it on a online <code>Rack PasS</code>, and let it pass through china&#8217;s <code>GFW</code> (a network filter that blocking foreign websites which china government consider as a threat).</p>
 
-<p><img class="left" src="http://dreaming-in-digital.me/images/logo.png" width="200" height="200" title="logo" ></p>
+<p><img class="left" src="http://dreaming-in-digital.me/images/logoa.png" width="200" height="200" title="logo" ></p>
 
 <p>I have also slightly alter the site theme. I like the default theme, so I just made a logo using photoshop and slightly changed the background. The difficult part is modify the <code>SASS</code> to let the page header adjust it’s size automatically, so my blog looks better on smartphones or any other handheld device. Octopress is very well organized, but even still, I had no clue what SASS is, and how to modify it.  After guessing and testing all the SASS code of the default theme I kind of figure out how it works. After a few hours of twisting I finally get it done.<!-- more --></p>
 
