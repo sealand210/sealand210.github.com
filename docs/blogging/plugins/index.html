@@ -4,10 +4,32 @@
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
+	
+	<script type="text/javascript">
+	        var Sys = {};
+	        var ua = navigator.userAgent.toLowerCase();
+	        var s;
+	        (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+	        (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+	        (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+	        (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+	        (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+
+	      
+	        if (Sys.ie == '7.0') window.location="bnls.html";;
+			if (Sys.ie == '6.0') window.location="bnls.html";;
+			if (Sys.ie == '5.5') window.location="bnls.html";;
+			if (Sys.ie == '5.0') window.location="bnls.html";;
+			//if (Sys.firefox) window.location="firefox.html";;
+			//if (Sys.chrome) window.location="chrome.html";;
+			//if (Sys.opera) window.location="opera.html";;
+			//if (Sys.safari) window.location="safari.html";;
+	    </script>
+	
   <meta charset="utf-8">
   <title>Plugins - Dreaming in Digital - A blog by Evan Hung</title>
   <meta name="author" content="Evan Hung">
-
+	
   
   <meta name="description" content="linux, ios, mac, arduino, design, digital">
   
@@ -51,6 +73,8 @@
 	<img src="/images/logo.png" style="max-width:100%;"/>
 </a>
 </div>
+
+
 
 </header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
