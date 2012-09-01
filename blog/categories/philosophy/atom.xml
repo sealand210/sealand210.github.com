@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: philosophy | Dreaming in Digital]]></title>
+  <link href="http://dreaming-in-digital.me/blog/categories/philosophy/atom.xml" rel="self"/>
+  <link href="http://dreaming-in-digital.me/"/>
+  <updated>2012-09-01T15:55:29+08:00</updated>
+  <id>http://dreaming-in-digital.me/</id>
+  <author>
+    <name><![CDATA[Evan Hung]]></name>
+    <email><![CDATA[mail2evan@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ten Quotes From Steve Jobs]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/09/01/ten-best-quotes-from-steve-jobs/"/>
+    <updated>2012-09-01T14:31:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/09/01/ten-best-quotes-from-steve-jobs</id>
+    <content type="html"><![CDATA[<p><img src="/images/steve_jobs.jpg" title="Steve Jobs" ></p>
+
+<p><blockquote><p>1. We're here to put a dent in the universe. Otherwise why else even be here?</p></blockquote></p>
+
+<p><blockquote><p>2. Innovation distinguishes between a leader and a follower.</p></blockquote></p>
+
+<p><blockquote><p>3. Your time is limited, so don't waste it living someone else's life.</p></blockquote></p>
+
+<!--more-->
+
+
+<p><blockquote><p>4. You can't just ask customers what they want and then try to give that to them. By the time you get it built, they'll want something new.</p></blockquote></p>
+
+<p><blockquote><p>5. Being the richest man in the cemetery doesn't matter to me ... Going to bed at night saying we've done something wonderful... that's what matters to me.</p></blockquote></p>
+
+<p><blockquote><p>6. The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.</p></blockquote></p>
+
+<p><blockquote><p>7. Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life.</p></blockquote></p>
+
+<p><blockquote><p>8. I want to put a ding in the universe.</p></blockquote></p>
+
+<p><blockquote><p>9. Quality is more important than quantity. One home run is better than two doubles.</p></blockquote></p>
+
+<p><blockquote><p>10. Design is not just what it looks like and feels like. Design is how it works.</p></blockquote></p>
+]]></content>
+  </entry>
+  
+</feed>

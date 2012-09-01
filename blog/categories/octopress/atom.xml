@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: octopress | Dreaming in Digital]]></title>
+  <title><![CDATA[Category: Octopress | Dreaming in Digital]]></title>
   <link href="http://dreaming-in-digital.me/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://dreaming-in-digital.me/"/>
-  <updated>2012-08-29T16:54:49+08:00</updated>
+  <updated>2012-09-01T15:55:29+08:00</updated>
   <id>http://dreaming-in-digital.me/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
@@ -12,6 +12,88 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Browser Compatibility Issue]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/08/21/browser-compatibility-issue/"/>
+    <updated>2012-08-21T18:20:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/08/21/browser-compatibility-issue</id>
+    <content type="html"><![CDATA[<p><img src="/images/ss.png"></p>
+
+<p>Unfortunately, Octopress does not compatible with some old browser such as IE6 and IE7。 Webpage looks horrible under those browsers. Although most of the click on this blog is from myself, I still don't want anybody to have the chance to see these horrible pages.</p>
+
+<p>It's impossible for me to modify the code of octopress to make it compatible with old browsers. So my idea is to add some browser detection code, if it found these old IE browsers then redirect user to a page telling them they should upgrade or change browser.</p>
+
+<!--more-->
+
+
+<p>After googling a little bit, I found it's actually very easy to detect browser, just a few lines of java script:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>browser detecting code  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">Sys</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">ua</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">ActiveXObject</span><span class="p">)</span>
+</span><span class='line'>            <span class="nx">Sys</span><span class="p">.</span><span class="nx">ie</span> <span class="o">=</span> <span class="nx">ua</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/msie ([\d.]+)/</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getBoxObjectFor</span><span class="p">)</span>
+</span><span class='line'>            <span class="nx">Sys</span><span class="p">.</span><span class="nx">firefox</span> <span class="o">=</span> <span class="nx">ua</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/firefox\/([\d.]+)/</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">MessageEvent</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nb">document</span><span class="p">.</span><span class="nx">getBoxObjectFor</span><span class="p">)</span>
+</span><span class='line'>            <span class="nx">Sys</span><span class="p">.</span><span class="nx">chrome</span> <span class="o">=</span> <span class="nx">ua</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/chrome\/([\d.]+)/</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">opera</span><span class="p">)</span>
+</span><span class='line'>            <span class="nx">Sys</span><span class="p">.</span><span class="nx">opera</span> <span class="o">=</span> <span class="nx">ua</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/opera.([\d.]+)/</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">openDatabase</span><span class="p">)</span>
+</span><span class='line'>            <span class="nx">Sys</span><span class="p">.</span><span class="nx">safari</span> <span class="o">=</span> <span class="nx">ua</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/version\/([\d.]+)/</span><span class="p">)[</span><span class="mi">1</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">ie</span><span class="p">)</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;IE: &#39;</span><span class="o">+</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">ie</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">firefox</span><span class="p">)</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;Firefox: &#39;</span><span class="o">+</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">firefox</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">chrome</span><span class="p">)</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;Chrome: &#39;</span><span class="o">+</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">chrome</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">opera</span><span class="p">)</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;Opera: &#39;</span><span class="o">+</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">opera</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">safari</span><span class="p">)</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;Safari: &#39;</span><span class="o">+</span><span class="nx">Sys</span><span class="p">.</span><span class="nx">safari</span><span class="p">);</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Basically it's using regular expression to select a specific userAgent token,  ua.match(); function will return a positive number when selected user token is being found. The user agent token of IE browser is msie x.0, the x representing the version. To jump to certain page when user is using IE6 or 7 simply add :</p>
+
+<pre><code>if (Sys.ie == '7.0' || Sys.ie == '6.0' ) window.location="test.html";;
+</code></pre>
+
+<p>After testing the page using IEtester, I found these code working prefectly well, page loading is very fast, it doesn't have any lag at all. what a simple and elegant solution.</p>
+
+<h2>Reference:</h2>
+
+<p><a href="http://www.cnblogs.com/leadzen/archive/2008/09/06/1285764.html">http://www.cnblogs.com/leadzen/archive/2008/09/06/1285764.html</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The very first post]]></title>
