@@ -4,7 +4,7 @@
   <title><![CDATA[Dreaming in Digital]]></title>
   <link href="http://dreaming-in-digital.me/atom.xml" rel="self"/>
   <link href="http://dreaming-in-digital.me/"/>
-  <updated>2012-09-06T12:42:40+08:00</updated>
+  <updated>2012-09-06T13:02:02+08:00</updated>
   <id>http://dreaming-in-digital.me/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[15 Useful Google Search Tips and Tricks]]></title>
-    <link href="http://dreaming-in-digital.me/blog/2012/09/06/15-useful-google-search-tips-and-tricks/"/>
+    <title type="html"><![CDATA[19 Useful Google Search Tips and Tricks]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/09/06/19-useful-google-search-tips-and-tricks/"/>
     <updated>2012-09-06T11:14:00+08:00</updated>
-    <id>http://dreaming-in-digital.me/blog/2012/09/06/15-useful-google-search-tips-and-tricks</id>
+    <id>http://dreaming-in-digital.me/blog/2012/09/06/19-useful-google-search-tips-and-tricks</id>
     <content type="html"><![CDATA[<p><img src="http://dreaming-in-digital.me/images/google.jpg" title="google" ></p>
 
 <p>You may be using Google search multiple times per day to locate something on the web. Learning how to use Google search effectively can boost your productivity instantly.</p>
@@ -155,19 +155,35 @@ If you want Google to show only the pages which has the words in the given seque
 <p>This is a quick way to search free ebooks and music files. The idea is to use google to search the website that have opened their html directory, little bit like searching shared samba files.</p>
 
 <p>search for mp3 files:<br/>
-<code>-inurl:htm -inurl:html intitle:"index of" name mp3</code> <br/>
-ebooks:<br/>
-<code>-inurl:htm -inurl:html intitle:"index of" +("/ebooks"|"/book") +(chm|pdf|zip)</code> <br/>
-comic books:<br/>
-<code>-inurl:htm -inurl:html intitle:"index of" "Last modified" comics +(cbr|pdf|zip)</code> <br/>
-avi videos:<br/>
+<code>-inurl:htm -inurl:html intitle:"index of" name mp3</code></p>
+
+<p>ebooks:<br/>
+<code>-inurl:htm -inurl:html intitle:"index of" +("/ebooks"|"/book") +(chm|pdf|zip)</code></p>
+
+<p>comic books:<br/>
+<code>-inurl:htm -inurl:html intitle:"index of" "Last modified" comics +(cbr|pdf|zip)</code></p>
+
+<p>avi videos:<br/>
 <code>?intitle:index.of? avi name</code></p>
 
 <p>Here just a few example, it can be used to search any type of files.</p>
 
+<p><strong>16. Block Specific Sites From Search Results</strong><br/>
+Remove specific domains from your results using the <code>-site:website.com</code> phrase in your search.</p>
+
+<p><strong>17. Search A Site’s Text Only</strong><br/>
+Using the <code>allintext:</code> operator has Google search only within the text of a site and it ignores the links and titles.</p>
+
+<p><strong>18. Track Flights</strong><br/>
+Tracking the flight of a loved one has never been easier, simply enter the airline and flight number into the regular Google search box and you’ll get the arrival and departure times.</p>
+
+<p><strong>19. Search Google Images for People</strong><br/>
+When searching Google Images for people, add <code>&amp;imgtype=face</code> to the end of the URL returned in your browser’s address bar.</p>
+
 <h2>Reference:</h2>
 
-<p><a href="http://www.thegeekstuff.com/2009/06/expertise-in-google-search/">http://www.thegeekstuff.com/2009/06/expertise-in-google-search/</a></p>
+<p><a href="http://www.thegeekstuff.com/2009/06/expertise-in-google-search/">http://www.thegeekstuff.com/2009/06/expertise-in-google-search/</a>
+<a href="http://googletricks.com/search-tips/google-search-tips/google-tricks-for-search/">http://googletricks.com/search-tips/google-search-tips/google-tricks-for-search/</a></p>
 ]]></content>
   </entry>
   
