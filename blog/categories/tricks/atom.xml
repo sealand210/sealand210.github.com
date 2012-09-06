@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tricks | Dreaming in Digital]]></title>
+  <link href="http://dreaming-in-digital.me/blog/categories/tricks/atom.xml" rel="self"/>
+  <link href="http://dreaming-in-digital.me/"/>
+  <updated>2012-09-06T12:42:40+08:00</updated>
+  <id>http://dreaming-in-digital.me/</id>
+  <author>
+    <name><![CDATA[Evan Hung]]></name>
+    <email><![CDATA[mail2evan@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[15 Useful Google Search Tips and Tricks]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/09/06/15-useful-google-search-tips-and-tricks/"/>
+    <updated>2012-09-06T11:14:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/09/06/15-useful-google-search-tips-and-tricks</id>
+    <content type="html"><![CDATA[<p><img src="/images/google.jpg" title="google" ></p>
+
+<p>You may be using Google search multiple times per day to locate something on the web. Learning how to use Google search effectively can boost your productivity instantly.</p>
+
+<p><strong>1. Identify Local Time for Any City in the World using Google</strong></p>
+
+<p>If you want to know current local time in a particular city, use the following method. To see the current local time in Los Angeles do the following. Go-ahead and try this yourself for your local city and see how it works.</p>
+
+<p><code>Syntax: time in PLACE</code></p>
+
+<p>Example: time Los Angeles</p>
+
+<!--more-->
+
+
+<p><strong>2. Exclude Keywords in the Search</strong></p>
+
+<p>If you want Google to exclude a word while searching the web page, use – (minus) before the search as shown below. This example searches for the pages which has the word ebooks, and without the word free.</p>
+
+<p><code>ebooks -free</code></p>
+
+<p><strong>3. Search for Keywords with Similar Meaning. Include Synonym Keywords in Search</strong></p>
+
+<p>Instead of searching for only the given word, using ~ before the keyword you can instruct Google to search for webpages with the exact given word or the words which has same meaning. In the following example, giving ~tutorial also searches for keywords: guide, manual, reference etc.</p>
+
+<p><code>nagios ~tutorial</code>
+or
+<code>debian installation ~tutorial</code></p>
+
+<p><strong>4. Match Any Single Word in the Search Using * </strong></p>
+
+<p>While searching, if you are not sure about which keyword to be placed in the phrase, you can match any single word using *.</p>
+
+<p>For example, if you want to search for examples of vim substitution, and you are not sure whether to search for “vim editor find and replace examples”, or “vim editor search and replace examples”, then use * , which will match either find, search or any other word, as shown below.</p>
+
+<p>vim editor * and replace examples
+Note: You can also match multiple words by using multiple number of *’s respectively.</p>
+
+<p><strong>5. Use OR in Google Search</strong></p>
+
+<p>Using OR operator in between the words makes the following kind of search possible in Google. Following example will search for bash examples or bash programs.</p>
+
+<p><code>bash examples OR programs</code></p>
+
+<p>Note: The keyword OR should be in uppercase</p>
+
+<p><strong>6. Identify Definition a Word</strong></p>
+
+<p>To view the definition of a word use the following method.</p>
+
+<p><code>Syntax: define: &lt;word&gt;</code></p>
+
+<p>example:define: tech savvy</p>
+
+<p><strong>7. Search for a Range Using ..</strong></p>
+
+<p>If you are looking for a product in a specific price range use the following. It will search for the pages with text PDA, and $400 to $450 ranged text.</p>
+
+<p><code>Syntax: text $100..$125</code></p>
+
+<p>example:PDA $400..$450</p>
+
+<p><strong>8. Mathematical Calculations using Google</strong></p>
+
+<p>Normally for doing the metric conversions we will be using some online conversion websites or conversion softwares. However just by using Google search box you can do calculations, unit conversions and money conversions as explained below.</p>
+
+<p>You can use the Google search box as your scientific calculator as</p>
+
+<p><code>sqrt(10)</code></p>
+
+<p><strong>9. Unit Conversion using Google</strong></p>
+
+<p>The following will show the equivalent pounds for one kg.</p>
+
+<p><code>kg in pound</code></p>
+
+<p>Following are few other possible conversions.</p>
+
+<p><code>km in mile</code><br/>
+<code>inch in feet</code><br/>
+<code>acre in square feet</code><br/>
+<code>sec in ms</code> <br/>
+<code>kilobyte in byte</code></p>
+
+<p>You get the idea now. Try your own conversion and see how it works.</p>
+
+<p><strong>10. Money Conversion using Google</strong></p>
+
+<p>Following converts US Dollars in Euros (or) US Dollars in Rupees.</p>
+
+<p><code>USD in Euro</code>
+(or)
+<code>USD in INR</code></p>
+
+<p><strong>11. Searching within a Specific Website</strong></p>
+
+<p>You can search for a text in a specific website. The following example shows how to search only within our blog – www.thegeekstuff.com.</p>
+
+<p><code>examples site:www.thegeekstuff.com</code></p>
+
+<p>Note: There is no space between site: and the website address.</p>
+
+<p><strong>12. Google Search for a Given Keywords (both without and with sequence)</strong></p>
+
+<p>Basic Search for a Given Keywords – Without Sequence
+The very basic feature of Google which everybody is using today is searching for pages which has the given text as:</p>
+
+<p><code>linux command line history examples</code></p>
+
+<p>Note: Highlighted words are not in the order as we given in the search box.</p>
+
+<p>Basic Search with Keywords In a Given Sequence
+If you want Google to show only the pages which has the words in the given sequence, then double quote that search string as:</p>
+
+<p><code>"guide to install php5 from source"</code></p>
+
+<p>Note: Highlighted words are in the same order as we given in the search box.</p>
+
+<p><strong>13. Search Based on File Type</strong></p>
+
+<p>The following examples searches only the matching keywords inside a Power Point presentations. In the same way, you can search for the doc, pdf and other file types.</p>
+
+<p><code>linux introduction filetype:ppt</code></p>
+
+<p><strong>14. Identify Local Weather for Any City in the World using Google</strong></p>
+
+<p>To see the current weather in Los Angeles do the following. Go-ahead and try this yourself for your local city and see how it works.</p>
+
+<p><code>Syntax: weather PLACE</code></p>
+
+<p>weather Los Angeles</p>
+
+<p><strong>15. Search files in html directory</strong></p>
+
+<p>This is a quick way to search free ebooks and music files. The idea is to use google to search the website that have opened their html directory, little bit like searching shared samba files.</p>
+
+<p>search for mp3 files:<br/>
+<code>-inurl:htm -inurl:html intitle:"index of" name mp3</code> <br/>
+ebooks:<br/>
+<code>-inurl:htm -inurl:html intitle:"index of" +("/ebooks"|"/book") +(chm|pdf|zip)</code> <br/>
+comic books:<br/>
+<code>-inurl:htm -inurl:html intitle:"index of" "Last modified" comics +(cbr|pdf|zip)</code> <br/>
+avi videos:<br/>
+<code>?intitle:index.of? avi name</code></p>
+
+<p>Here just a few example, it can be used to search any type of files.</p>
+
+<h2>Reference:</h2>
+
+<p><a href="http://www.thegeekstuff.com/2009/06/expertise-in-google-search/">http://www.thegeekstuff.com/2009/06/expertise-in-google-search/</a></p>
+]]></content>
+  </entry>
+  
+</feed>
