@@ -4,7 +4,7 @@
   <title><![CDATA[Dreaming in Digital]]></title>
   <link href="http://dreaming-in-digital.me/atom.xml" rel="self"/>
   <link href="http://dreaming-in-digital.me/"/>
-  <updated>2012-09-06T13:02:02+08:00</updated>
+  <updated>2012-09-10T21:39:01+08:00</updated>
   <id>http://dreaming-in-digital.me/</id>
   <author>
     <name><![CDATA[Evan Hung]]></name>
@@ -14,10 +14,263 @@
 
   
   <entry>
-    <title type="html"><![CDATA[19 Useful Google Search Tips and Tricks]]></title>
-    <link href="http://dreaming-in-digital.me/blog/2012/09/06/19-useful-google-search-tips-and-tricks/"/>
+    <title type="html"><![CDATA[Google Search Command]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/09/10/google-search-command/"/>
+    <updated>2012-09-10T19:57:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/09/10/google-search-command</id>
+    <content type="html"><![CDATA[<p><img src="http://dreaming-in-digital.me/images/google_earth.png" title="google search command" ></p>
+
+<h2>cache:</h2>
+
+<p>Show the cached snapshot of a page
+Sample search:</p>
+
+<pre><code>cache:www.google.com
+</code></pre>
+
+<p>The cache is the search engine&#8217;s copy of a page in its index. Google typically caches the first 101K of a page and not the images. The links to the caches are shown in Google&#8217;s search results and Page Info button on the Google toolbar can be used to access any cache available for the page.</p>
+
+<!--more-->
+
+
+<h2>link:</h2>
+
+<p>List pages which link to a page
+Sample search:</p>
+
+<pre><code>link:www.google.com
+</code></pre>
+
+<p>The term &#8220;backlinks&#8221; is used to describe those links from external sites which point to the page in question. These links are also known as &#8220;Inbound Links&#8221; or &#8220;IBLs&#8221;. &#8220;Outbound Links&#8221; or &#8220;OBLs&#8221; are links from your site to other sites. The search engine optimisation world places great emphasis on increasing the number of backlinks a site enjoys because Google&#8217;s conceptual model uses backlinks as votes. In general terms, a site with more backlinks is more of an authority than a site with fewer backlinks. Not all backlinks are of equal importance. In Google the phrase &#8220;B.O.&#8221; is used for &#8220;Backlink Obsession&#8221; as a humorous reference for webmasters and optimisers who fixate on gaining links. Google&#8217;s use of the link command omits the &#8220;http&#8221; protocol.</p>
+
+<h2>related:</h2>
+
+<p>List pages which Google consider to be related to another
+Sample search:</p>
+
+<pre><code>related:www.google.com
+</code></pre>
+
+<p>Related (or similar pages) are worked out by Google&#8217;s algorithm. This search command allows you to find pages which discuss a similar topic to a page you have already found. For example, a review of Product X is likely to have related pages which also discuss Product X but may simply just be various reviews.</p>
+
+<h2>info:</h2>
+
+<p>Find one specific URL in the search database
+Sample search:</p>
+
+<pre><code>info:www.google.com
+</code></pre>
+
+<p>Presents limited information about a particular page in Google&#8217;s index. Typically the command shows the page snippet and title as well as links to the cache or related pages. Typing a fully qualified URL into Google&#8217;s search produces the same page.</p>
+
+<h2>define:</h2>
+
+<p>Show Google&#8217;s glossary definations for a term
+Sample search:</p>
+
+<pre><code>define:goofy
+</code></pre>
+
+<p>Google lists definitions of the keyword harvested from authoritative glossary-esq sites. The definitions are presented in a bullet point format with a link to the authoritative URL in green below. This results page differs from the links to Answers.com in the top right of many standard search result pages.</p>
+
+<h2>site:</h2>
+
+<p>Restrict a search to a single site
+Sample search:</p>
+
+<pre><code>site:www.evanhung.com
+</code></pre>
+
+<p>The site: command can be used in two ways; to restrict a search to one site or to list all the pages Google has indexed from one site. For example, site:www.searchcommands.com google searches Search Commands* for the word google and site:www.searchcommands.com searches the site for any page and therefore lists them all. The site: command can either include or omit the &#8216;www&#8217; in a domain, omitting the www will return all the sub-domains from the domain which Google has found.</p>
+
+<h2>allintitle:</h2>
+
+<p>Restrict a search so that all the keywords must appear in the title
+Sample search:</p>
+
+<pre><code>allintittle:google
+</code></pre>
+
+<p>This advanced search command restricts results to those pages which have all the keywords in their title tag. The title tag is the mark up to put contents into the bar at the top of the browser (typically blue in Windows XP). The title tag for this page is Google search commands :: Search Commands*.</p>
+
+<h2>intitle:</h2>
+
+<p>Restrict a search so that some of the keywords must appear in the title
+Sample search: Search for pages which contain google in the title and search or commands in the title or body tag</p>
+
+<p>Returns pages which have some of the keywords in the title tag. This advanced search command differs from allintitle: in that only the keyword adjacent to intitle:</p>
+
+<pre><code>intitle:google
+</code></pre>
+
+<h2>allintext:</h2>
+
+<p>Restrict a search so that all of the keywords must appear in the body text
+Sample search:</p>
+
+<pre><code>allintext:google
+</code></pre>
+
+<p>Returns pages which have all of the keywords contained within the body tag. This advanced search ignores the title tag which normally has a non trivial significance in Google&#8217;s algorithm.</p>
+
+<h2>allinurl:</h2>
+
+<p>Restrict a search so that all of the keywords must appear in the page address
+Sample search:</p>
+
+<pre><code>allinurl:google
+</code></pre>
+
+<p>A page&#8217;s URL is its address.</p>
+
+<h2>inurl:</h2>
+
+<p>Restrict a search so that some keywords must appear in the page address
+Sample search:</p>
+
+<pre><code>inurl:google
+</code></pre>
+
+<p>Lists pages which have one or more of the keywords in their URL. The inurl: command can sometimes be used to restrict searches to specific sites and directories. For example: inurl:searchcommands.com/google/ inurl will return pages with &#8216;searchcommands.com/google/&#8217; in their URL and inurl elsewhere on the page.</p>
+
+<h2>OR</h2>
+
+<p>List pages which have at least some of the keywords
+Sample search:</p>
+
+<pre><code>dog OR bear
+</code></pre>
+
+<p>By default Google searches for almost all the keywords entered (some words like a, the, of, etc are omitted). The OR command is placed between two or more keywords and instructs Google to return pages which contain one or another of the keywords.</p>
+
+<h2>+</h2>
+
+<p>Insist that the search engine includes a given keyword in the search results
+Sample search:</p>
+
+<pre><code>Dreaming + in + digital
+</code></pre>
+
+<p>Google purposely omits some words from normal searches but the use of the + command instructs the search engine to include them. For example, Google would treat a search for search the commands as a search for search commands as the is ignored but the phrase search +the commands would ensure the word the was included.</p>
+
+<h2>-</h2>
+
+<p>Insist that the search engine omits pages which match a given keyword in the search results
+Sample search:</p>
+
+<pre><code>ebook -food
+</code></pre>
+
+<p>The - command creates a negative keyword which must not be present on any page Google matches with the rest of the query. For example, football -american is likely to return pages about Soccer.</p>
+
+<h2>~</h2>
+
+<p>Enhance a search to include synonyms for a given keyword
+Sample search:</p>
+
+<pre><code>~solution
+</code></pre>
+
+<p>The synonym search is more like an associated word search. With the ~ symbol present before a keyword Google will return pages which contain the keyword or pages which contain words commonly associated with the keyword. Google simply looks as frequencies across the internet to determine which words are associated with which. Words associated with commands are: reference and syntax.</p>
+
+<h2>*</h2>
+
+<p>Include a wildcard match in your search results
+Sample search:<br/>
+I * you</p>
+
+<p>The order of keywords in a Google search is significant. Adding the asterisk * as a wildcard to the keyphrase instructs Google that one or more other words should appear in that location.</p>
+
+<h2>[#]&#8230;[#]</h2>
+
+<p>Search a range of numbers as a keyword
+Sample search:</p>
+
+<pre><code>champions 1976...2005
+</code></pre>
+
+<p>The [#] values are replaced with numbers to form a range. For example, 1976&#8230;2005. Google will search for pages which contain numbers matching the first, the last or any number in the middle of the sequence.</p>
+
+<h2>daterange:</h2>
+
+<p>Restrict a search to any daterange
+Sample search:</p>
+
+<pre><code>daterange:2453638-2453615 search
+</code></pre>
+
+<p>The daterange command restricts Google&#8217;s search to pages published between two dates. The date format used in the Julian calendar rather than the traditional Gregorian calendar. You can use Search Commands* Julian date calculator to formulate the correct syntax.</p>
+
+<h2>&#8221;&#8221;</h2>
+
+<p>Restrict a search so that the keywords must appear consecutively in a phrase
+Sample search:</p>
+
+<pre><code>"search commands"
+</code></pre>
+
+<p>The order of keywords in a Google search is significant but not sacrosanct. Searching for search commands returns pages which simply mention search and commands. The search for &#8220;search commands&#8221; returns different results as only pages which mention search commands as a complete phrase are listed.</p>
+
+<h2>safesearch:</h2>
+
+<p>Restrict a search to exclude adult-content Sample search:</p>
+
+<pre><code>Safesearch:girls
+</code></pre>
+
+<p>The safesearch command mimics the effects of enabling SafeSearch on the Google preferences panel and excludes adult related content. Unlike other Google commands it is necessary to leave a space between safesearch: and the keyword as placing the keyword directly adjacent to the colon results in odd (often adult) results. For example, safesearch:girls (safesearch is off in this example).</p>
+
+<h2>filetype:</h2>
+
+<p>Restrict a search to a given type of file
+Sample search:</p>
+
+<pre><code>steve jobs filetype:pdf
+</code></pre>
+
+<p>Google indexes more than just HTML pages. A wide range of different file types, including PDF and .doc files, are found in the search engine. The filetype command restricts searches to documents which match the filetype extension.</p>
+
+<h2>Reference:</h2>
+
+<p><a href="http://www.searchcommands.com/google/">http://www.searchcommands.com/google/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lake Monger, Perth, Australia]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/09/08/lake-monger-perth-australia/"/>
+    <updated>2012-09-08T21:49:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/09/08/lake-monger-perth-australia</id>
+    <content type="html"><![CDATA[<p><img src="http://dreaming-in-digital.me/images/lake_monger2.jpg" title="Lake monger" ></p>
+
+<p>Planet Earth is a truly beautiful and amazing planet, and Aussies surely know how to protect it.</p>
+
+<p>Here is some shoots taken in the Lake Monger Reserve, it&#8217;s located 5km north of perth.</p>
+
+<!--more-->
+
+
+<p>It could take a 30 yuan ticket for a visit if China have such a place, but in Australia it&#8217;s free.</p>
+
+<p>The color of the lake is beautiful, but there is one problem with this picture, the DOF is little bit too short, I must have forgot to adjust the aperture.</p>
+
+<p><img src="http://dreaming-in-digital.me/images/lake_monger3.jpg" title="Black Swan" ></p>
+
+<p>It&#8217;s the first time in my life to spot a black swan, if memory serves me correctly.</p>
+
+<p>Beautiful black body with a red break, black swan surely know how to dress.</p>
+
+<p><img src="http://dreaming-in-digital.me/images/lake_monger1.jpg" title="Sunset" ></p>
+
+<p>Sunset, the end of a lovely day.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[8 Useful Google Search Tips and Tricks]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/09/06/8-useful-google-search-tips-and-tricks/"/>
     <updated>2012-09-06T11:14:00+08:00</updated>
-    <id>http://dreaming-in-digital.me/blog/2012/09/06/19-useful-google-search-tips-and-tricks</id>
+    <id>http://dreaming-in-digital.me/blog/2012/09/06/8-useful-google-search-tips-and-tricks</id>
     <content type="html"><![CDATA[<p><img src="http://dreaming-in-digital.me/images/google.jpg" title="google" ></p>
 
 <p>You may be using Google search multiple times per day to locate something on the web. Learning how to use Google search effectively can boost your productivity instantly.</p>
@@ -33,54 +286,7 @@
 <!--more-->
 
 
-<p><strong>2. Exclude Keywords in the Search</strong></p>
-
-<p>If you want Google to exclude a word while searching the web page, use – (minus) before the search as shown below. This example searches for the pages which has the word ebooks, and without the word free.</p>
-
-<p><code>ebooks -free</code></p>
-
-<p><strong>3. Search for Keywords with Similar Meaning. Include Synonym Keywords in Search</strong></p>
-
-<p>Instead of searching for only the given word, using ~ before the keyword you can instruct Google to search for webpages with the exact given word or the words which has same meaning. In the following example, giving ~tutorial also searches for keywords: guide, manual, reference etc.</p>
-
-<p><code>nagios ~tutorial</code>
-or
-<code>debian installation ~tutorial</code></p>
-
-<p><strong>4. Match Any Single Word in the Search Using * </strong></p>
-
-<p>While searching, if you are not sure about which keyword to be placed in the phrase, you can match any single word using *.</p>
-
-<p>For example, if you want to search for examples of vim substitution, and you are not sure whether to search for “vim editor find and replace examples”, or “vim editor search and replace examples”, then use * , which will match either find, search or any other word, as shown below.</p>
-
-<p>vim editor * and replace examples
-Note: You can also match multiple words by using multiple number of *’s respectively.</p>
-
-<p><strong>5. Use OR in Google Search</strong></p>
-
-<p>Using OR operator in between the words makes the following kind of search possible in Google. Following example will search for bash examples or bash programs.</p>
-
-<p><code>bash examples OR programs</code></p>
-
-<p>Note: The keyword OR should be in uppercase</p>
-
-<p><strong>6. Identify Definition a Word</strong></p>
-
-<p>To view the definition of a word use the following method.</p>
-
-<p><code>Syntax: define: &lt;word&gt;</code></p>
-
-<p>example:define: tech savvy</p>
-
-<p><strong>7. Search for a Range Using ..</strong></p>
-
-<p>If you are looking for a product in a specific price range use the following. It will search for the pages with text PDA, and $400 to $450 ranged text.</p>
-
-<p><code>Syntax: text $100..$125</code></p>
-
-<p>example:PDA $400..$450</p>
-
-<p><strong>8. Mathematical Calculations using Google</strong></p>
+<p><strong>2. Mathematical Calculations using Google</strong></p>
 
 <p>Normally for doing the metric conversions we will be using some online conversion websites or conversion softwares. However just by using Google search box you can do calculations, unit conversions and money conversions as explained below.</p>
 
@@ -88,7 +294,7 @@ Note: You can also match multiple words by using multiple number of *’s respec
 
 <p><code>sqrt(10)</code></p>
 
-<p><strong>9. Unit Conversion using Google</strong></p>
+<p><strong>3. Unit Conversion using Google</strong></p>
 
 <p>The following will show the equivalent pounds for one kg.</p>
 
@@ -104,7 +310,7 @@ Note: You can also match multiple words by using multiple number of *’s respec
 
 <p>You get the idea now. Try your own conversion and see how it works.</p>
 
-<p><strong>10. Money Conversion using Google</strong></p>
+<p><strong>4. Money Conversion using Google</strong></p>
 
 <p>Following converts US Dollars in Euros (or) US Dollars in Rupees.</p>
 
@@ -112,37 +318,7 @@ Note: You can also match multiple words by using multiple number of *’s respec
 (or)
 <code>USD in INR</code></p>
 
-<p><strong>11. Searching within a Specific Website</strong></p>
-
-<p>You can search for a text in a specific website. The following example shows how to search only within our blog – www.thegeekstuff.com.</p>
-
-<p><code>examples site:www.thegeekstuff.com</code></p>
-
-<p>Note: There is no space between site: and the website address.</p>
-
-<p><strong>12. Google Search for a Given Keywords (both without and with sequence)</strong></p>
-
-<p>Basic Search for a Given Keywords – Without Sequence
-The very basic feature of Google which everybody is using today is searching for pages which has the given text as:</p>
-
-<p><code>linux command line history examples</code></p>
-
-<p>Note: Highlighted words are not in the order as we given in the search box.</p>
-
-<p>Basic Search with Keywords In a Given Sequence
-If you want Google to show only the pages which has the words in the given sequence, then double quote that search string as:</p>
-
-<p><code>"guide to install php5 from source"</code></p>
-
-<p>Note: Highlighted words are in the same order as we given in the search box.</p>
-
-<p><strong>13. Search Based on File Type</strong></p>
-
-<p>The following examples searches only the matching keywords inside a Power Point presentations. In the same way, you can search for the doc, pdf and other file types.</p>
-
-<p><code>linux introduction filetype:ppt</code></p>
-
-<p><strong>14. Identify Local Weather for Any City in the World using Google</strong></p>
+<p><strong>5. Identify Local Weather for Any City in the World using Google</strong></p>
 
 <p>To see the current weather in Los Angeles do the following. Go-ahead and try this yourself for your local city and see how it works.</p>
 
@@ -168,16 +344,13 @@ If you want Google to show only the pages which has the words in the given seque
 
 <p>Here just a few example, it can be used to search any type of files.</p>
 
-<p><strong>16. Block Specific Sites From Search Results</strong><br/>
+<p><strong>6. Block Specific Sites From Search Results</strong><br/>
 Remove specific domains from your results using the <code>-site:website.com</code> phrase in your search.</p>
 
-<p><strong>17. Search A Site’s Text Only</strong><br/>
-Using the <code>allintext:</code> operator has Google search only within the text of a site and it ignores the links and titles.</p>
-
-<p><strong>18. Track Flights</strong><br/>
+<p><strong>7. Track Flights</strong><br/>
 Tracking the flight of a loved one has never been easier, simply enter the airline and flight number into the regular Google search box and you’ll get the arrival and departure times.</p>
 
-<p><strong>19. Search Google Images for People</strong><br/>
+<p><strong>8. Search Google Images for People</strong><br/>
 When searching Google Images for people, add <code>&amp;imgtype=face</code> to the end of the URL returned in your browser’s address bar.</p>
 
 <h2>Reference:</h2>

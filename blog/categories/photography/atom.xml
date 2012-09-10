@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Photography | Dreaming in Digital]]></title>
+  <link href="http://dreaming-in-digital.me/blog/categories/photography/atom.xml" rel="self"/>
+  <link href="http://dreaming-in-digital.me/"/>
+  <updated>2012-09-10T21:39:01+08:00</updated>
+  <id>http://dreaming-in-digital.me/</id>
+  <author>
+    <name><![CDATA[Evan Hung]]></name>
+    <email><![CDATA[mail2evan@me.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Lake Monger, Perth, Australia]]></title>
+    <link href="http://dreaming-in-digital.me/blog/2012/09/08/lake-monger-perth-australia/"/>
+    <updated>2012-09-08T21:49:00+08:00</updated>
+    <id>http://dreaming-in-digital.me/blog/2012/09/08/lake-monger-perth-australia</id>
+    <content type="html"><![CDATA[<p><img src="/images/lake_monger2.jpg" title="Lake monger" ></p>
+
+<p>Planet Earth is a truly beautiful and amazing planet, and Aussies surely know how to protect it.</p>
+
+<p>Here is some shoots taken in the Lake Monger Reserve, it's located 5km north of perth.</p>
+
+<!--more-->
+
+
+<p>It could take a 30 yuan ticket for a visit if China have such a place, but in Australia it's free.</p>
+
+<p>The color of the lake is beautiful, but there is one problem with this picture, the DOF is little bit too short, I must have forgot to adjust the aperture.</p>
+
+<p><img src="/images/lake_monger3.jpg" title="Black Swan" ></p>
+
+<p>It's the first time in my life to spot a black swan, if memory serves me correctly.</p>
+
+<p>Beautiful black body with a red break, black swan surely know how to dress.</p>
+
+<p><img src="/images/lake_monger1.jpg" title="Sunset" ></p>
+
+<p>Sunset, the end of a lovely day.</p>
+]]></content>
+  </entry>
+  
+</feed>

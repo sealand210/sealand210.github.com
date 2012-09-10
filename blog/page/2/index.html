@@ -40,7 +40,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://dreaming-in-digital.me">
+  <link rel="canonical" href="http://dreaming-in-digital.me/blog/page/2">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -105,7 +105,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/09/10/google-search-command/">Google Search Command</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/04/22/akg-k518dj-single-entry-with-detachable-cable-modification/">AKG K518DJ Detachable Cable Modification</a></h1>
     
     
       <p class="meta">
@@ -121,30 +121,70 @@
   
 
 
-<time datetime="2012-09-10T19:57:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
+<time datetime="2012-04-22T14:21:00+08:00" pubdate data-updated="true">Apr 22<span>nd</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><img src="/images/google_earth.png" title="google search command" ></p>
+  <div class="entry-content"><p><img src="/images/518dj-2.jpg"></p>
 
-<h2>cache:</h2>
+<p>I like the design of Monster headphones, especially the detachable cable and it&#8217;s cable design, but I don&#8217;t appreciate it&#8217;s sound quality and price tag. My AKG 518dj headphone is the best headphone in it&#8217;s price range, but it also came with a long, old fashioned and undetachable cable. So I decide to modify it, make it&#8217;s cable function just like Monsters, and then give it a Monster cable.</p>
 
-<p>Show the cached snapshot of a page
-Sample search:</p>
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/22/akg-k518dj-single-entry-with-detachable-cable-modification/">Read on &rarr;</a>
+    </footer>
+  
 
-<pre><code>cache:www.google.com
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/02/disable-internal-display-on-lion/">Disable Internal Display in Lion</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-02T14:54:00+08:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="/images/macbook-pro-with-dual-cinema-displays.jpeg"></p>
+
+<p>Some MacBook Pro or Air users may want to disable their internal screen when the laptop is connected to an external display, this is generally <a href="http://osxdaily.com/2011/01/14/turn-off-the-macbook-or-macbook-pro-screen-with-the-computer-still-on/">achieved in two ways</a> but since Mac OS X 10.7 the internal screen is more persistent and wants to stay on.</p>
+
+<p>To disable the internal screen for OS X Lion based laptops, launch the Terminal and enter the following command:</p>
+
+<pre><code>sudo nvram boot-args="iog=0x0"
 </code></pre>
 
-<p>The cache is the search engine&#8217;s copy of a page in its index. Google typically caches the first 101K of a page and not the images. The links to the caches are shown in Google&#8217;s search results and Page Info button on the Google toolbar can be used to access any cache available for the page.</p>
-
 </div>
   
   
     <footer>
-      <a rel="full-article" href="/blog/2012/09/10/google-search-command/">Read on &rarr;</a>
+      <a rel="full-article" href="/blog/2012/04/02/disable-internal-display-on-lion/">Read on &rarr;</a>
     </footer>
   
 
@@ -156,7 +196,7 @@ Sample search:</p>
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/09/08/lake-monger-perth-australia/">Lake Monger, Perth, Australia</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/03/30/setting-lightdm/">Setting Ubuntu LightDM</a></h1>
     
     
       <p class="meta">
@@ -172,24 +212,43 @@ Sample search:</p>
   
 
 
-<time datetime="2012-09-08T21:49:00+08:00" pubdate data-updated="true">Sep 8<span>th</span>, 2012</time>
+<time datetime="2012-03-30T23:57:00+08:00" pubdate data-updated="true">Mar 30<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><img src="/images/lake_monger2.jpg" title="Lake monger" ></p>
+  <div class="entry-content"><p><img class="center" src="/images/LightDM.png"></p>
 
-<p>Planet Earth is a truly beautiful and amazing planet, and Aussies surely know how to protect it.</p>
+<p>Ubuntu Oneiric comes with a new display/login manager - <code>LightDM</code>. Just like setting <code>GDM</code>, <code>XDM</code> or <code>KDM</code> etc., LightDM can also be set to auto-login by creating a custom file named <code>lightdm.conf</code> under <code>/etc/lightdm</code> directory. This way you can also define your preferred auto-login session.</p>
 
-<p>Here is some shoots taken in the Lake Monger Reserve, it&#8217;s located 5km north of perth.</p>
+<p>So, get to a Terminal and run:</p>
+
+<pre><code>gksudo gedit /etc/lightdm/lightdm.conf
+</code></pre>
+
+<p>If you are doing it from the console, you would need to use &#8216;nano&#8217; instead of &#8216;gedit&#8217; and &#8216;sudo&#8217; instead o &#8216;gksudo&#8217;.</p>
+
+<p>In the file that opens up, enter this text:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[SeatDefaults]
+</span><span class='line'>autologin-user=&lt;USERNAME&gt;
+</span><span class='line'>autologin-user-timeout=0
+</span><span class='line'>user-session=ubuntu
+</span><span class='line'>greeter-session=unity-greeter</span></code></pre></td></tr></table></div></figure>
+
 
 </div>
   
   
     <footer>
-      <a rel="full-article" href="/blog/2012/09/08/lake-monger-perth-australia/">Read on &rarr;</a>
+      <a rel="full-article" href="/blog/2012/03/30/setting-lightdm/">Read on &rarr;</a>
     </footer>
   
 
@@ -201,7 +260,7 @@ Sample search:</p>
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/09/06/8-useful-google-search-tips-and-tricks/">8 Useful Google Search Tips and Tricks</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/03/16/the-very-first-post/">The Very First Post</a></h1>
     
     
       <p class="meta">
@@ -217,131 +276,22 @@ Sample search:</p>
   
 
 
-<time datetime="2012-09-06T11:14:00+08:00" pubdate data-updated="true">Sep 6<span>th</span>, 2012</time>
+<time datetime="2012-03-16T16:35:00+08:00" pubdate data-updated="true">Mar 16<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><img src="/images/google.jpg" title="google" ></p>
+  <div class="entry-content"><p>In the past two days I&#8217;ve been working my butt off to set up this blog. It&#8217;s not my first time to set up a website, but it is my first time to set up a octopress site, and host it on a online <code>Rack PasS</code>, and let it pass through china&#8217;s <code>GFW</code> (a network filter that blocking foreign websites which china government consider as a threat).</p>
 
-<p>You may be using Google search multiple times per day to locate something on the web. Learning how to use Google search effectively can boost your productivity instantly.</p>
+<p><img class="left" src="/images/logoa.png" width="200" height="200" title="logo" ></p>
 
-<p><strong>1. Identify Local Time for Any City in the World using Google</strong></p>
-
-<p>If you want to know current local time in a particular city, use the following method. To see the current local time in Los Angeles do the following. Go-ahead and try this yourself for your local city and see how it works.</p>
-
-<p><code>Syntax: time in PLACE</code></p>
-
-<p>Example: time Los Angeles</p>
-
-</div>
+<p>I have also slightly alter the site theme. I like the default theme, so I just made a logo using photoshop and slightly changed the background. The difficult part is modify the <code>SASS</code> to let the page header adjust it’s size automatically, so my blog looks better on smartphones or any other handheld device. Octopress is very well organized, but even still, I had no clue what SASS is, and how to modify it.  After guessing and testing all the SASS code of the default theme I kind of figure out how it works. After a few hours of twisting I finally get it done.</div>
   
   
     <footer>
-      <a rel="full-article" href="/blog/2012/09/06/8-useful-google-search-tips-and-tricks/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/01/ten-best-quotes-from-steve-jobs/">Ten Quotes From Steve Jobs</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-01T14:31:00+08:00" pubdate data-updated="true">Sep 1<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="/images/steve_jobs.jpg" title="Steve Jobs" ></p>
-
-<blockquote><p>1. We&#8217;re here to put a dent in the universe. Otherwise why else even be here?</p></blockquote>
-
-
-
-
-<blockquote><p>2. Innovation distinguishes between a leader and a follower.</p></blockquote>
-
-
-
-
-<blockquote><p>3. Your time is limited, so don&#8217;t waste it living someone else&#8217;s life.</p></blockquote>
-
-
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/09/01/ten-best-quotes-from-steve-jobs/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/21/browser-compatibility-issue/">Browser Compatibility Issue</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-21T18:20:00+08:00" pubdate data-updated="true">Aug 21<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="/images/ss.png"></p>
-
-<p>Unfortunately, Octopress does not compatible with some old browser such as IE6 and IE7。 Webpage looks horrible under those browsers. Although most of the click on this blog is from myself, I still don&#8217;t want anybody to have the chance to see these horrible pages.</p>
-
-<p>It&#8217;s impossible for me to modify the code of octopress to make it compatible with old browsers. So my idea is to add some browser detection code, if it found these old IE browsers then redirect user to a page telling them they should upgrade or change browser.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/08/21/browser-compatibility-issue/">Read on &rarr;</a>
+      <a rel="full-article" href="/blog/2012/03/16/the-very-first-post/">Read on &rarr;</a>
     </footer>
   
 
@@ -350,9 +300,9 @@ Sample search:</p>
   
   <div class="pagination">
     
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
-    
     <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
     
   </div>
 </div>
